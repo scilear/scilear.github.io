@@ -192,6 +192,37 @@
 
         footer p {
             opacity: 0.8;
+            margin-bottom: 0.5rem;
+        }
+
+        .powered-by {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            opacity: 0.7;
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
+        }
+
+        .powered-by a {
+            color: white;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+            transition: opacity 0.3s;
+        }
+
+        .powered-by a:hover {
+            opacity: 1;
+            text-decoration: underline;
+        }
+
+        .powered-by img {
+            height: 16px;
+            width: auto;
+            vertical-align: middle;
         }
 
         @media (max-width: 768px) {
@@ -280,6 +311,14 @@
     <footer>
         <div class="container">
             <p>&copy; 2026 AlphAngel. All rights reserved.</p>
+            <div class="powered-by">
+                <span>A</span>
+                <a href="https://www.solvefortime.com" target="_blank" rel="noopener noreferrer">
+                    <img src="https://www.solvefortime.com/logo_sft.webp" alt="SolveForTime">
+                    SolveForTime.com
+                </a>
+                <span>website</span>
+            </div>
         </div>
     </footer>
 </body>
