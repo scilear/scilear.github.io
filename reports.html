@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Access AlphAngel's comprehensive financial analysis reports on volatility, P2P lending, credit markets, and capital markets. Browse our archive of detailed research.">
+    <meta name="keywords" content="financial reports, market analysis, volatility reports, P2P lending analysis, credit market research">
+    <title>Reports Archive - AlphAngel</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f8f9fa;
+        }
+
+        header {
+            background: linear-gradient(135deg, #13585b 0%, #0c8389 100%);
+            color: white;
+            padding: 2rem 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .logo {
+            width: 60px;
+            height: 60px;
+            background: white;
+            border-radius: 8px;
+            padding: 5px;
+        }
+
+        .logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        nav {
+            margin-top: 1rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1.5rem;
+            background: rgba(255,255,255,0.1);
+            border-radius: 5px;
+            transition: background 0.3s;
+            display: inline-block;
+            margin: 0.5rem 0.5rem 0 0;
+        }
+
+        nav a:hover {
+            background: rgba(255,255,255,0.2);
+        }
+
+        .page-title {
+            background: white;
+            padding: 2rem 0;
+            text-align: center;
+            border-bottom: 3px solid #13585b;
+        }
+
+        .page-title h2 {
+            font-size: 2rem;
+            color: #13585b;
+        }
+
+        .content {
+            padding: 3rem 0;
+        }
+
+        .latest-reports {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+
+        .latest-reports h3 {
+            color: #13585b;
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 0.5rem;
+        }
+
+        .latest-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1rem;
+        }
+
+        .latest-item {
+            padding: 1rem;
+            background: #f8f9fa;
+            border-radius: 8px;
+            border-left: 4px solid #0c8389;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .latest-item:hover {
+            transform: translateX(5px);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .latest-item a {
+            text-decoration: none;
+            color: #13585b;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .latest-item a:hover {
+            text-decoration: underline;
+        }
+
+        .latest-item .date {
+            color: #666;
+            font-size: 0.9rem;
+            margin-top: 0.3rem;
+        }
+
+        .reports-archive {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .reports-archive h3 {
+            color: #13585b;
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 0.5rem;
+        }
+
+        .tree-view {
+            list-style: none;
+        }
+
+        .tree-view ul {
+            list-style: none;
+            margin-left: 1.5rem;
+            display: none;
+        }
+
+        .tree-view ul.open {
+            display: block;
+        }
+
+        .tree-item {
+            padding: 0.5rem;
+            margin: 0.3rem 0;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background 0.2s;
+        }
+
+        .tree-item:hover {
+            background: #f0f0f0;
+        }
+
+        .tree-item.category {
+            font-weight: 600;
+            color: #13585b;
+            font-size: 1.1rem;
+            border-left: 3px solid #0c8389;
+            padding-left: 1rem;
+        }
+
+        .tree-item.year {
+            font-weight: 500;
+            color: #13585b;
+            padding-left: 1rem;
+        }
+
+        .tree-item.month {
+            color: #555;
+            padding-left: 1rem;
+        }
+
+        .tree-item.report {
+            color: #333;
+            cursor: default;
+        }
+
+        .tree-item.report:hover {
+            background: white;
+        }
+
+        .tree-item.report a {
+            color: #13585b;
+            text-decoration: none;
+            padding: 0.3rem 0.5rem;
+            display: inline-block;
+            border-radius: 3px;
+            transition: background 0.2s;
+        }
+
+        .tree-item.report a:hover {
+            background: #e8f0fe;
+            text-decoration: underline;
+        }
+
+        .toggle-icon {
+            display: inline-block;
+            margin-right: 0.5rem;
+            transition: transform 0.2s;
+            font-size: 0.8rem;
+        }
+
+        .toggle-icon.open {
+            transform: rotate(90deg);
+        }
+
+        .no-reports {
+            text-align: center;
+            padding: 3rem;
+            color: #666;
+        }
+
+        .no-reports p {
+            margin-bottom: 1rem;
+        }
+
+        .no-reports code {
+            background: #f0f0f0;
+            padding: 0.2rem 0.5rem;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+        }
+
+        footer {
+            background: #1a1a1a;
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        footer p {
+            opacity: 0.8;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .latest-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo-section">
+                    <div class="logo">
+                        <img src="https://solvefortime.com/logo.svg" alt="AlphAngel Logo" onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22 font-size=%2240%22 font-weight=%22bold%22 fill=%22%2313585b%22%3EAα%3C/text%3E%3C/svg%3E';">
+                    </div>
+                    <div>
+                        <h1>AlphAngel</h1>
+                    </div>
+                </div>
+                <nav>
+                    <a href="index.html">Home</a>
+                    <a href="reports.html">Reports</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section class="page-title">
+        <div class="container">
+            <h2>Reports Archive</h2>
+        </div>
+    </section>
+
+    <section class="content">
+        <div class="container">
+            <div class="latest-reports">
+                <h3>📊 Latest Reports by Category</h3>
+                <div id="latestReports" class="latest-grid">
+                    <div class="no-reports"><p>Loading reports...</p></div>
+                </div>
+            </div>
+
+            <div class="reports-archive">
+                <h3>📁 Complete Archive</h3>
+                <div id="reportsTree">
+                    <div class="no-reports"><p>Loading reports...</p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 AlphAngel. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // GitHub repository information (CHANGE THESE!)
+        const GITHUB_USER = 'scilear';
+        const GITHUB_REPO = 'scilear.github.io';
+        const REPORTS_PATH = 'reports';
+
+        // Load reports from GitHub API
+        async function loadReports() {
+            try {
+                const apiUrl = `https://api.github.com/repos/${GITHUB_USER}/${GITHUB_REPO}/contents/${REPORTS_PATH}`;
+                const response = await fetch(apiUrl);
+
+                if (!response.ok) {
+                    throw new Error('Failed to fetch reports from GitHub');
+                }
+
+                const files = await response.json();
+
+                // Filter only HTML files
+                const htmlFiles = files
+                    .filter(file => file.type === 'file' && file.name.endsWith('.html'))
+                    .map(file => file.name);
+
+                return htmlFiles;
+            } catch (error) {
+                console.error('Error loading reports from GitHub:', error);
+                return [];
+            }
+        }
+
+        function parseReportFilename(filename) {
+            // Extract report name and date from filename
+            // Format: reportnameYYYYMMDD.html
+            const match = filename.match(/^(.+?)(\d{8})\.html$/);
+            if (!match) return null;
+
+            const [, name, dateStr] = match;
+            const year = dateStr.substring(0, 4);
+            const month = dateStr.substring(4, 6);
+            const day = dateStr.substring(6, 8);
+
+            return {
+                filename: filename,
+                name: name.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase()),
+                rawName: name,
+                year: year,
+                month: month,
+                day: day,
+                date: new Date(year, parseInt(month) - 1, day),
+                dateStr: `${year}-${month}-${day}`
+            };
+        }
+
+        function organizeReports(reports) {
+            const organized = {};
+
+            reports.forEach(filename => {
+                const parsed = parseReportFilename(filename);
+                if (!parsed) return;
+
+                if (!organized[parsed.rawName]) {
+                    organized[parsed.rawName] = {
+                        displayName: parsed.name,
+                        years: {}
+                    };
+                }
+
+                if (!organized[parsed.rawName].years[parsed.year]) {
+                    organized[parsed.rawName].years[parsed.year] = {};
+                }
+
+                if (!organized[parsed.rawName].years[parsed.year][parsed.month]) {
+                    organized[parsed.rawName].years[parsed.year][parsed.month] = [];
+                }
+
+                organized[parsed.rawName].years[parsed.year][parsed.month].push(parsed);
+            });
+
+            return organized;
+        }
+
+        function getLatestReports(organized) {
+            const latest = {};
+
+            Object.keys(organized).forEach(reportName => {
+                const report = organized[reportName];
+                let latestDate = null;
+                let latestReport = null;
+
+                Object.keys(report.years).forEach(year => {
+                    Object.keys(report.years[year]).forEach(month => {
+                        report.years[year][month].forEach(r => {
+                            if (!latestDate || r.date > latestDate) {
+                                latestDate = r.date;
+                                latestReport = r;
+                            }
+                        });
+                    });
+                });
+
+                if (latestReport) {
+                    latest[reportName] = latestReport;
+                }
+            });
+
+            return latest;
+        }
+
+        function renderLatestReports(latest) {
+            const container = document.getElementById('latestReports');
+
+            if (Object.keys(latest).length === 0) {
+                container.innerHTML = `
+                    <div class="no-reports">
+                        <p>No reports available yet.</p>
+                        <p>Place your HTML reports in the <code>/reports</code> directory with format: <code>reportnameYYYYMMDD.html</code></p>
+                        <p><strong>Example:</strong> <code>volatility-analysis20260128.html</code></p>
+                    </div>
+                `;
+                return;
+            }
+
+            const html = Object.values(latest)
+                .sort((a, b) => b.date - a.date)
+                .map(report => `
+                    <div class="latest-item">
+                        <a href="reports/${report.filename}">${report.name}</a>
+                        <div class="date">${report.dateStr}</div>
+                    </div>
+                `).join('');
+
+            container.innerHTML = html;
+        }
+
+        function renderTreeView(organized) {
+            const container = document.getElementById('reportsTree');
+
+            if (Object.keys(organized).length === 0) {
+                container.innerHTML = `
+                    <div class="no-reports">
+                        <p>No reports available yet.</p>
+                        <p>Reports should be placed in the <code>/reports</code> directory with format: <code>reportnameYYYYMMDD.html</code></p>
+                        <p><strong>Examples:</strong></p>
+                        <ul style="list-style: none; margin-top: 1rem;">
+                            <li><code>volatility-analysis20260128.html</code></li>
+                            <li><code>p2p-lending-review20260125.html</code></li>
+                            <li><code>credit-markets20260120.html</code></li>
+                        </ul>
+                    </div>
+                `;
+                return;
+            }
+
+            const monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+
+            let html = '<ul class="tree-view">';
+
+            Object.keys(organized).sort().forEach(reportName => {
+                const report = organized[reportName];
+                html += `
+                    <li class="tree-item category" onclick="toggleTree(this)">
+                        <span class="toggle-icon">▶</span>${report.displayName}
+                        <ul>
+                `;
+
+                Object.keys(report.years).sort().reverse().forEach(year => {
+                    html += `
+                        <li class="tree-item year" onclick="toggleTree(this); event.stopPropagation();">
+                            <span class="toggle-icon">▶</span>${year}
+                            <ul>
+                    `;
+
+                    Object.keys(report.years[year]).sort().reverse().forEach(month => {
+                        const monthName = monthNames[parseInt(month) - 1];
+                        html += `
+                            <li class="tree-item month" onclick="toggleTree(this); event.stopPropagation();">
+                                <span class="toggle-icon">▶</span>${monthName} ${year}
+                                <ul>
+                        `;
+
+                        report.years[year][month].sort((a, b) => b.date - a.date).forEach(r => {
+                            html += `
+                                <li class="tree-item report">
+                                    <a href="reports/${r.filename}" onclick="event.stopPropagation();">
+                                        ${r.dateStr} - ${r.name}
+                                    </a>
+                                </li>
+                            `;
+                        });
+
+                        html += '</ul></li>';
+                    });
+
+                    html += '</ul></li>';
+                });
+
+                html += '</ul></li>';
+            });
+
+            html += '</ul>';
+            container.innerHTML = html;
+        }
+
+        function toggleTree(element) {
+            const icon = element.querySelector('.toggle-icon');
+            const ul = element.querySelector('ul');
+
+            if (ul) {
+                ul.classList.toggle('open');
+                icon.classList.toggle('open');
+            }
+        }
+
+        // Initialize
+        async function init() {
+            const reports = await loadReports();
+            const organized = organizeReports(reports);
+            const latest = getLatestReports(organized);
+
+            renderLatestReports(latest);
+            renderTreeView(organized);
+        }
+
+        init();
+    </script>
+</body>
+</html>

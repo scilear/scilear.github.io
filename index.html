@@ -1,5 +1,286 @@
-<body>
-Scilear github website initialisation.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AlphAngel - Expert financial data analysis and consulting in volatility, P2P lending, credit markets, and capital markets. Professional insights and detailed reports.">
+    <meta name="keywords" content="financial analysis, volatility analysis, P2P lending, credit markets, capital markets, financial consulting, data analytics">
+    <meta name="author" content="AlphAngel">
+    <title>AlphAngel - Financial Data Analysis & Consulting</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-scilear at gmail
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f8f9fa;
+        }
+
+        header {
+            background: linear-gradient(135deg, #13585b 0%, #0c8389 100%);
+            color: white;
+            padding: 2rem 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .logo {
+            width: 60px;
+            height: 60px;
+            background: white;
+            border-radius: 8px;
+            padding: 5px;
+        }
+
+        .logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .tagline {
+            font-size: 1.1rem;
+            opacity: 0.95;
+            margin-top: 0.5rem;
+        }
+
+        nav {
+            margin-top: 1rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1.5rem;
+            background: rgba(255,255,255,0.1);
+            border-radius: 5px;
+            transition: background 0.3s;
+            display: inline-block;
+            margin: 0.5rem 0.5rem 0 0;
+        }
+
+        nav a:hover {
+            background: rgba(255,255,255,0.2);
+        }
+
+        .hero {
+            background: white;
+            padding: 3rem 0;
+            text-align: center;
+        }
+
+        .hero h2 {
+            font-size: 2rem;
+            color: #13585b;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: #666;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+        }
+
+        .services {
+            padding: 4rem 0;
+        }
+
+        .services h2 {
+            text-align: center;
+            font-size: 2rem;
+            color: #13585b;
+            margin-bottom: 3rem;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border-top: 4px solid #0c8389;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+
+        .service-card h3 {
+            color: #13585b;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .service-card p {
+            color: #666;
+            line-height: 1.7;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, #13585b 0%, #0c8389 100%);
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: white;
+            color: #13585b;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-top: 1rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .cta-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+
+        footer {
+            background: #1a1a1a;
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        footer p {
+            opacity: 0.8;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .hero h2 {
+                font-size: 1.5rem;
+            }
+
+            .service-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo-section">
+                    <div class="logo">
+                        <img src="https://solvefortime.com/logo.svg" alt="AlphAngel Logo" onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22 font-size=%2240%22 font-weight=%22bold%22 fill=%22%2313585b%22%3EAα%3C/text%3E%3C/svg%3E';">
+                    </div>
+                    <div>
+                        <h1>AlphAngel</h1>
+                        <p class="tagline">Financial Data Analysis & Consulting</p>
+                    </div>
+                </div>
+                <nav>
+                    <a href="index.html">Home</a>
+                    <a href="reports.html">Reports</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h2>Expert Financial Intelligence & Analytics</h2>
+            <p>We deliver comprehensive financial data analysis and insights across volatility markets, P2P lending, credit instruments, and capital markets. Our data-driven approach helps you make informed investment decisions.</p>
+        </div>
+    </section>
+
+    <section class="services">
+        <div class="container">
+            <h2>Our Expertise</h2>
+            <div class="service-grid">
+                <div class="service-card">
+                    <h3>Volatility Analysis</h3>
+                    <p>In-depth analysis of market volatility patterns, VIX dynamics, and options pricing. We provide actionable insights on volatility trading strategies and risk management.</p>
+                </div>
+
+                <div class="service-card">
+                    <h3>P2P Lending Analytics</h3>
+                    <p>Comprehensive evaluation of peer-to-peer lending platforms, default risk assessment, and portfolio optimization strategies for alternative credit investments.</p>
+                </div>
+
+                <div class="service-card">
+                    <h3>Credit Markets</h3>
+                    <p>Detailed analysis of corporate credit, sovereign debt, and credit derivatives. Monitor credit spreads, default probabilities, and relative value opportunities.</p>
+                </div>
+
+                <div class="service-card">
+                    <h3>Capital Markets Intelligence</h3>
+                    <p>Strategic insights on equity and fixed income markets, market structure analysis, and quantitative trading strategies backed by rigorous data analysis.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <h2>Access Our Latest Research</h2>
+            <p>Explore our comprehensive reports and analysis</p>
+            <a href="reports.html" class="cta-button">View Reports</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 AlphAngel. All rights reserved.</p>
+        </div>
+    </footer>
 </body>
+</html>
