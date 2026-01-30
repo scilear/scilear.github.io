@@ -1,51 +1,318 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Daily investment summary — 2026-01-30 (Gemini)</title>
-  <style>
-    :root{
-      --bg:#ffffff; --fg:#111827; --muted:#6b7280; --line:#e5e7eb;
-      --card:#ffffff; --shadow:0 1px 2px rgba(0,0,0,.05);
-      --accent:#1a73e8;
-    }
-    body{margin:0;background:#f8fafc;color:var(--fg);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;}
-    .wrap{max-width:900px;margin:0 auto;padding:18px;}
-    header{padding:10px 0 18px;}
-    h1{margin:0 0 6px;font-size:20px;letter-spacing:-.01em;}
-    .meta{color:var(--muted);font-size:13px;line-height:1.4}
-    .meta a{color:var(--accent);text-decoration:none}
-    .card{background:var(--card);border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow);padding:14px 14px 12px;margin:12px 0;}
-    .card h2{margin:0 0 10px;font-size:15px;}
-    p{margin:8px 0;color:#111827;line-height:1.55;font-size:14px;}
-    ul{margin:8px 0 0 18px;}
-    li{margin:6px 0;line-height:1.5;font-size:14px;}
-    .table-wrap{overflow:auto;border:1px solid var(--line);border-radius:12px;}
-    table{width:100%;border-collapse:separate;border-spacing:0;min-width:640px;font-size:13px;}
-    th,td{padding:10px 10px;border-bottom:1px solid var(--line);vertical-align:top;}
-    th{position:sticky;top:0;background:#f9fafb;text-align:left;font-weight:600;color:#111827;}
-    tr:last-child td{border-bottom:none;}
-    td{color:#111827;}
-    .subtext p{color:#374151;font-size:13px;}
-    footer{color:var(--muted);font-size:12px;margin:16px 2px 6px;}
-    code{background:#f3f4f6;border:1px solid var(--line);border-radius:8px;padding:2px 6px;}
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investment Report - January 30, 2026</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #34495e;
+            --accent-color: #3498db;
+            --positive-color: #27ae60;
+            --negative-color: #c0392b;
+            --warning-color: #f39c12;
+            --light-bg: #ecf0f1;
+            --text-color: #333;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.05);
+        }
+
+        header {
+            border-bottom: 3px solid var(--primary-color);
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            margin: 0;
+            font-size: 2.2rem;
+        }
+
+        .date {
+            color: #7f8c8d;
+            font-weight: 500;
+        }
+
+        h2 {
+            color: var(--secondary-color);
+            border-left: 5px solid var(--accent-color);
+            padding-left: 15px;
+            margin-top: 40px;
+        }
+
+        .market-dashboard {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .card {
+            background: var(--light-bg);
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .card h3 {
+            margin: 0 0 10px 0;
+            font-size: 1rem;
+            color: #7f8c8d;
+        }
+
+        .price {
+            font-size: 1.4rem;
+            font-weight: bold;
+            display: block;
+        }
+
+        .change {
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .pos { color: var(--positive-color); }
+        .neg { color: var(--negative-color); }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 0.95rem;
+        }
+
+        th {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: left;
+            padding: 12px;
+        }
+
+        td {
+            padding: 12px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        .action-tag {
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-weight: bold;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+        }
+
+        .buy { background-color: #e8f8f5; color: var(--positive-color); border: 1px solid var(--positive-color); }
+        .sell { background-color: #fdedec; color: var(--negative-color); border: 1px solid var(--negative-color); }
+        .hold { background-color: #fef9e7; color: var(--warning-color); border: 1px solid var(--warning-color); }
+        .watch { background-color: #ebf5fb; color: var(--accent-color); border: 1px solid var(--accent-color); }
+
+        .deep-dive {
+            background-color: #fdfefe;
+            border: 1px solid #e0e0e0;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .calendar-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+        
+        .footer {
+            margin-top: 50px;
+            text-align: center;
+            font-size: 0.8rem;
+            color: #95a5a6;
+            border-top: 1px solid #eee;
+            padding-top: 20px;
+        }
+    </style>
 </head>
 <body>
-  <div class="wrap">
-    <header>
-      <h1>Daily investment summary — 2026-01-30 (Gemini)</h1>
-      <div class="meta">Converted to HTML with a Gemini-like layout (cards, spacing, readable tables).</div>
-      <div class="meta" style="margin-top:10px">This is your comprehensive daily investment summary for Wednesday, January 28, 2026, updated to include the NRG Energy (NRG) recommendation and the latest signals from your inbox.&lt;/p&gt;
+    <div class="container">
+        <header>
+            <div>
+                <h1>Investment Report</h1>
+                <div class="date">Friday, January 30, 2026</div>
+            </div>
+            <div style="text-align: right;">
+                <strong>Gemini Research Div.</strong><br>
+                <em>Daily Briefing</em>
+            </div>
+        </header>
 
-&lt;!-- Captured from Gemini conversation: https://gemini.google.com/app/49eacf22e784432b --&gt;
-&lt;/body&gt;&lt;/html&gt;</div>
-    </header>
+        <!-- SECTION 1: MACRO DASHBOARD -->
+        <div class="market-dashboard">
+            <div class="card">
+                <h3>S&P 500</h3>
+                <span class="price">6,939</span>
+                <span class="change neg">▼ 0.43%</span>
+            </div>
+            <div class="card">
+                <h3>Euro Stoxx 50</h3>
+                <span class="price">5,940</span>
+                <span class="change pos">▲ 0.66%</span>
+            </div>
+            <div class="card">
+                <h3>Gold</h3>
+                <span class="price">~$5,150</span>
+                <span class="change neg">▼ CRASH (-6%)</span>
+            </div>
+            <div class="card">
+                <h3>Bitcoin</h3>
+                <span class="price">$81,000</span>
+                <span class="change neg">▼ CRASH (-5%)</span>
+            </div>
+        </div>
 
-    
+        <h2>1. Macro Update & Sentiment</h2>
+        <ul>
+            <li><strong>Market Tone:</strong> Highly volatile and divergent. While the Fed held rates steady, signaling "firm footing," the market is ruthlessly filtering for quality. Tech earnings are causing massive splits: <strong>Meta (+11%)</strong> surged on AI spending validation, while <strong>Microsoft (-10%)</strong> collapsed on supply chain bottlenecks.</li>
+            <li><strong>Commodities Flash Crash:</strong> Both Gold and Silver experienced a severe liquidation event today (Silver down >10%). Analysts cite profit-taking after record highs and dollar stability.</li>
+            <li><strong>Crypto Correction:</strong> Bitcoin fell to $81k amid "institutional fatigue" and heavy ETF outflows.</li>
+            <li><strong>Policy & Geopolitics:</strong> A potential US government shutdown looms. The US trade deficit has widened, and tariffs are moving from "headline news" to "execution friction" for businesses.</li>
+        </ul>
 
-    <footer>Generated by Wendy • Source: Gemini output captured from the Gemini web app.</footer>
-  </div>
+        <!-- SECTION 2: RECOMMENDATIONS -->
+        <h2>2. Analyst Recommendations & Trade Ideas</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th style="width: 10%;">Ticker</th>
+                    <th style="width: 10%;">Action</th>
+                    <th style="width: 45%;">Rationale / Status</th>
+                    <th style="width: 20%;">Source</th>
+                    <th style="width: 15%;">Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>ASTS</strong></td>
+                    <td><span class="action-tag buy">Strong Buy</span></td>
+                    <td><strong>"The ASTS Lead."</strong> BlueBird 7 launch imminent. Critical Gov/Defense contracts secured. Viewed as the leader in space-based cellular broadband.</td>
+                    <td>Altucher's Inv. Network</td>
+                    <td>Jan 29</td>
+                </tr>
+                <tr>
+                    <td><strong>META</strong></td>
+                    <td><span class="action-tag buy">Bullish</span></td>
+                    <td><strong>"Goes BOOM!"</strong> Q4 Revenue +24%. massive AI capex guidance ($115-135B) validated by revenue growth. Stock +11%.</td>
+                    <td>The Million Mission</td>
+                    <td>Jan 30</td>
+                </tr>
+                <tr>
+                    <td><strong>MSFT</strong></td>
+                    <td><span class="action-tag sell">Avoid</span></td>
+                    <td><strong>"Gets Hammered."</strong> Down 10%. Supply constraints are the bottleneck; cannot source GPUs fast enough to meet cloud demand.</td>
+                    <td>The Million Mission</td>
+                    <td>Jan 30</td>
+                </tr>
+                <tr>
+                    <td><strong>TSLA</strong></td>
+                    <td><span class="action-tag sell">Avoid</span></td>
+                    <td>Still trading at 16x sales with falling revenue. "Not touching the stock."</td>
+                    <td>The Million Mission</td>
+                    <td>Jan 30</td>
+                </tr>
+                <tr>
+                    <td><strong>RDW</strong></td>
+                    <td><span class="action-tag watch">Watch</span></td>
+                    <td><strong>Redwire Corp.</strong> Space datacenter infrastructure play. Low Earth orbit tech.</td>
+                    <td>Altucher's Inv. Network</td>
+                    <td>Jan 28</td>
+                </tr>
+                <tr>
+                    <td><strong>NOW</strong></td>
+                    <td><span class="action-tag watch">Watchlist</span></td>
+                    <td><strong>ServiceNow.</strong> Down 10% despite beat. "Getting close to smashing the buy button" as fundamentals remain strong.</td>
+                    <td>The Million Mission</td>
+                    <td>Jan 30</td>
+                </tr>
+                <tr>
+                    <td><strong>GME</strong></td>
+                    <td><span class="action-tag sell">Avoid</span></td>
+                    <td>Michael Burry is buying, betting on CEO's capital allocation. Analyst warns: "Turning it into a capital-allocation experiment adds uncertainty."</td>
+                    <td>The Million Mission</td>
+                    <td>Jan 28</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- SECTION 3: THEME OF THE WEEK -->
+        <h2>3. Theme of the Week: The Space Economy & AI Infrastructure</h2>
+        <div class="deep-dive">
+            <p><strong>The "Great Migration" Off-Planet</strong></p>
+            <p>A new narrative is emerging that links the AI boom with the Space Economy. With Earth-based data centers facing power and cooling constraints (evidenced by Microsoft's supply struggles), the "Space Datacenter" concept is gaining traction.</p>
+            <ul>
+                <li><strong>SpaceX + xAI Merger Rumors:</strong> Reports suggest Musk may merge SpaceX and xAI to build AI datacenters in orbit, targeting a $1.5 Trillion valuation.</li>
+                <li><strong>Key Plays:</strong>
+                    <ul>
+                        <li><strong>Connectivity:</strong> AST SpaceMobile (ASTS) - The primary pipe for data.</li>
+                        <li><strong>Infrastructure:</strong> Redwire (RDW) and Voyager Space (VOYG) - Building the physical stations and solar arrays.</li>
+                        <li><strong>Launch:</strong> Rocket Lab (RKLB) - The alternative to SpaceX for getting hardware to orbit.</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <!-- SECTION 4: CALENDAR -->
+        <h2>4. Look Ahead: Next 14 Days</h2>
+        <div class="calendar-grid">
+            <div>
+                <h3>📅 Corporate Earnings</h3>
+                <ul>
+                    <li><strong>Feb 2:</strong> Palantir (PLTR), Disney (DIS), Mizuho Financial.</li>
+                    <li><strong>Feb 12:</strong> CareTrust REIT (CTRE).</li>
+                    <li><strong>Watch For:</strong> AI commentary from Palantir and consumer strength signals from Disney.</li>
+                </ul>
+            </div>
+            <div>
+                <h3>📊 Economic Events</h3>
+                <ul>
+                    <li><strong>Feb 2:</strong> ISM Manufacturing Index.</li>
+                    <li><strong>Feb 4:</strong> ADP Employment Report.</li>
+                    <li><strong>Feb 6:</strong> <strong>US Non-Farm Payrolls (Employment Report)</strong> - Critical for Fed policy outlook.</li>
+                    <li><strong>Feb 11:</strong> US CPI (Inflation Data).</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p><em>Disclaimer: This report is for informational purposes only and does not constitute financial advice. Data aggregated from recent emails and public market sources.</em></p>
+        </div>
+    </div>
 </body>
 </html>
