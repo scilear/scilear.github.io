@@ -1,1 +1,272 @@
-NEED_GOG_RESULTS
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investment Report - February 2, 2026</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #3498db;
+            --bg-color: #f8f9fa;
+            --card-bg: #ffffff;
+            --text-color: #333333;
+            --success-color: #27ae60;
+            --warning-color: #f39c12;
+            --danger-color: #c0392b;
+        }
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background-color: var(--card-bg);
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        header {
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        h1 {
+            color: var(--primary-color);
+            margin: 0;
+            font-size: 2.2em;
+        }
+        .date {
+            color: #7f8c8d;
+            font-size: 1.1em;
+            font-weight: 500;
+        }
+        h2 {
+            color: var(--primary-color);
+            border-left: 5px solid var(--accent-color);
+            padding-left: 15px;
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
+        .section-content {
+            margin-bottom: 30px;
+        }
+        ul.macro-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        ul.macro-list li {
+            background-color: #f1f4f6;
+            margin-bottom: 10px;
+            padding: 15px;
+            border-radius: 5px;
+            border-left: 4px solid var(--accent-color);
+        }
+        ul.macro-list li strong {
+            color: var(--primary-color);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+            font-size: 0.95em;
+        }
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: var(--primary-color);
+            color: white;
+            font-weight: 600;
+        }
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+        .action-buy { color: var(--success-color); font-weight: bold; }
+        .action-sell { color: var(--danger-color); font-weight: bold; }
+        .action-hold { color: var(--warning-color); font-weight: bold; }
+        
+        .theme-box {
+            background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+        .theme-box h3 {
+            margin-top: 0;
+            border-bottom: 1px solid rgba(255,255,255,0.3);
+            padding-bottom: 10px;
+        }
+        .calendar-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        .calendar-col h3 {
+            color: var(--primary-color);
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
+        }
+        .calendar-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+            font-size: 0.9em;
+        }
+        .calendar-date {
+            font-weight: bold;
+            color: var(--accent-color);
+            min-width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Investment Report</h1>
+            <div class="date">February 2, 2026</div>
+        </header>
+
+        <!-- Section 1: Macro Update -->
+        <section>
+            <h2>Macro Update & Market Sentiment</h2>
+            <div class="section-content">
+                <ul class="macro-list">
+                    <li><strong>Market Tone:</strong> Risk-off sentiment prevails. US indices (S&P 500, Nasdaq) and European markets (Stoxx 600, DAX) are facing downward pressure. S&P 500 futures are down ~0.8%.</li>
+                    <li><strong>Commodities:</strong> Significant pullback in precious metals. Gold is down to ~$4,500 range and Silver has dropped sharply (~6-11%). Oil prices are rising due to renewed geopolitical tensions with Iran.</li>
+                    <li><strong>Monetary Policy:</strong> The Fed maintained rates at 3.50-3.75%, citing "solid" growth. All eyes are on the Bank of England and ECB rate decisions later this week (Feb 5).</li>
+                    <li><strong>Global Risks:</strong> Geopolitical hotspots (Iran, Taiwan) continue to drive market volatility. A new EU-India trade deal eliminates tariffs on 90% of goods, offering a positive counter-narrative.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Section 3: Deep Dive (Moved up for flow) -->
+        <section>
+            <div class="theme-box">
+                <h3>Theme of the Week: Strategic Defense & Reshoring</h3>
+                <p>
+                    The market is heavily rewarding companies aligned with national security and supply chain independence. 
+                    <strong>USA Rare Earth (USAR)</strong> secured massive government backing ($1.5B total) to break China's monopoly on critical minerals. 
+                    Simultaneously, the "Golden Dome" missile defense initiative is driving interest in drone technology players like <strong>Red Cat (RCAT)</strong> and <strong>Redwire (RDW)</strong>.
+                </p>
+            </div>
+        </section>
+
+        <!-- Section 2: Recommendations -->
+        <section>
+            <h2>Latest Recommendations & Updates</h2>
+            <div class="section-content">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Ticker</th>
+                            <th>Action</th>
+                            <th>Rationale / Status</th>
+                            <th>Source</th>
+                            <th>Date Sent</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>USAR</strong><br><span style="font-size:0.8em; color:#666;">USA Rare Earth</span></td>
+                            <td class="action-hold">HOLD / MONITOR</td>
+                            <td>Secured $277M gov funding + $1.3B loan. Critical for US manufacturing reshoring. Stock volatile; wait for settle.</td>
+                            <td>Microcap Millionaire</td>
+                            <td>Jan 26, 2026</td>
+                        </tr>
+                        <tr>
+                            <td><strong>ASST</strong><br><span style="font-size:0.8em; color:#666;">Strive Asset Mgmt</span></td>
+                            <td class="action-hold">HOLD</td>
+                            <td>Acquired Semler (SMLR). Now a "Bitcoin Treasury" company holding ~12.8k BTC. Undervalued vs assets but volatile.</td>
+                            <td>Microcap Millionaire</td>
+                            <td>Jan 26, 2026</td>
+                        </tr>
+                        <tr>
+                            <td><strong>RCAT</strong><br><span style="font-size:0.8em; color:#666;">Red Cat Holdings</span></td>
+                            <td class="action-buy">BULLISH</td>
+                            <td>Key player in US Army "Golden Dome" drone initiative. Recent dip viewed as profit-taking.</td>
+                            <td>Microcap Millionaire</td>
+                            <td>Jan 26, 2026</td>
+                        </tr>
+                        <tr>
+                            <td><strong>RDW</strong><br><span style="font-size:0.8em; color:#666;">Redwire Corp</span></td>
+                            <td class="action-buy">BULLISH</td>
+                            <td>Strategic partner for RCAT on defense drones. Positioning as key supplier for missile defense systems.</td>
+                            <td>Microcap Millionaire</td>
+                            <td>Jan 26, 2026</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Section 4: Calendar -->
+        <section>
+            <h2>Economic & Earnings Calendar (Next 14 Days)</h2>
+            <div class="calendar-grid">
+                <div class="calendar-col">
+                    <h3>Key Economic Events</h3>
+                    <div class="calendar-item">
+                        <span class="calendar-date">Feb 2 (Mon)</span>
+                        <span>ISM Manufacturing PMI (US)</span>
+                    </div>
+                    <div class="calendar-item">
+                        <span class="calendar-date">Feb 3 (Tue)</span>
+                        <span>JOLTS Job Openings</span>
+                    </div>
+                    <div class="calendar-item">
+                        <span class="calendar-date">Feb 4 (Wed)</span>
+                        <span>ADP Employment / Eurozone CPI</span>
+                    </div>
+                    <div class="calendar-item">
+                        <span class="calendar-date">Feb 5 (Thu)</span>
+                        <span><strong>BoE & ECB Interest Rate Decisions</strong></span>
+                    </div>
+                    <div class="calendar-item">
+                        <span class="calendar-date">Feb 6 (Fri)</span>
+                        <span><strong>US Non-Farm Payrolls (NFP)</strong></span>
+                    </div>
+                    <div class="calendar-item">
+                        <span class="calendar-date">Feb 11 (Wed)</span>
+                        <span><strong>US CPI Inflation Data</strong></span>
+                    </div>
+                </div>
+                <div class="calendar-col">
+                    <h3>Major Earnings</h3>
+                    <div class="calendar-item">
+                        <span class="calendar-date">Feb 2</span>
+                        <span>Palantir (PLTR), Disney (DIS), Tyson (TSN)</span>
+                    </div>
+                    <div class="calendar-item">
+                        <span class="calendar-date">Feb 3</span>
+                        <span>PayPal (PYPL), Pfizer (PFE), AMD, Chipotle</span>
+                    </div>
+                    <div class="calendar-item">
+                        <span class="calendar-date">Feb 4</span>
+                        <span>Alphabet (GOOGL), Uber, Eli Lilly (LLY)</span>
+                    </div>
+                    <div class="calendar-item">
+                        <span class="calendar-date">Feb 5</span>
+                        <span>ConocoPhillips, Roblox, MicroStrategy</span>
+                    </div>
+                    <div class="calendar-item">
+                        <span class="calendar-date">Feb 6</span>
+                        <span>Toyota, Philip Morris</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
