@@ -5,128 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Investment Report - February 6, 2026</title>
     <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #f4f7f6;
-            margin: 0;
-            padding: 20px;
-        }
-        .container {
-            max-width: 1000px;
-            margin: auto;
-            background: #fff;
-            padding: 40px;
-            border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-        }
-        header {
-            border-bottom: 2px solid #2c3e50;
-            margin-bottom: 30px;
-            padding-bottom: 10px;
-        }
-        h1 {
-            color: #2c3e50;
-            margin: 0;
-            font-size: 2.5em;
-        }
-        .date {
-            color: #7f8c8d;
-            font-size: 1.1em;
-        }
-        section {
-            margin-bottom: 40px;
-        }
-        h2 {
-            color: #2980b9;
-            border-left: 5px solid #2980b9;
-            padding-left: 15px;
-            margin-bottom: 20px;
-        }
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        li {
-            background: #ecf0f1;
-            margin-bottom: 10px;
-            padding: 15px;
-            border-radius: 4px;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-        }
-        th, td {
-            text-align: left;
-            padding: 12px;
-            border-bottom: 1px solid #ddd;
-        }
-        th {
-            background-color: #34495e;
-            color: white;
-        }
-        tr:hover {
-            background-color: #f1f1f1;
-        }
-        .action-buy {
-            color: #27ae60;
-            font-weight: bold;
-        }
-        .action-sell {
-            color: #c0392b;
-            font-weight: bold;
-        }
-        .action-hold {
-            color: #f39c12;
-            font-weight: bold;
-        }
-        .highlight {
-            background-color: #fff9c4;
-            padding: 2px 5px;
-            border-radius: 3px;
-        }
-        .calendar-item {
-            display: flex;
-            justify-content: space-between;
-            border-bottom: 1px dashed #bdc3c7;
-            padding: 8px 0;
-        }
-        .calendar-date {
-            font-weight: bold;
-            color: #2c3e50;
-            width: 150px;
-        }
-        .footer {
-            text-align: center;
-            font-size: 0.9em;
-            color: #95a5a6;
-            margin-top: 50px;
-            border-top: 1px solid #eee;
-            padding-top: 20px;
-        }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; background-color: #f4f7f6; margin: 0; padding: 20px; }
+        .container { max-width: 1000px; margin: auto; background: #fff; padding: 40px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        h1 { color: #2c3e50; border-bottom: 3px solid #3498db; padding-bottom: 10px; margin-bottom: 20px; }
+        h2 { color: #2980b9; border-bottom: 1px solid #ddd; padding-bottom: 5px; margin-top: 30px; }
+        .date-header { font-style: italic; color: #7f8c8d; margin-bottom: 30px; }
+        .summary-box { background: #e8f4fd; border-left: 5px solid #3498db; padding: 15px; margin-bottom: 25px; }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        th, td { padding: 12px; text-align: left; border-bottom: 1px solid #eee; }
+        th { background-color: #3498db; color: white; }
+        .buy { color: #27ae60; font-weight: bold; }
+        .sell { color: #c0392b; font-weight: bold; }
+        .hold { color: #f39c12; font-weight: bold; }
+        .badge { display: inline-block; padding: 4px 8px; border-radius: 4px; font-size: 0.85em; margin-right: 5px; background: #eee; }
+        .calendar-list { list-style: none; padding: 0; }
+        .calendar-item { border-left: 3px solid #95a5a6; padding-left: 15px; margin-bottom: 15px; }
+        .calendar-date { font-weight: bold; color: #2c3e50; }
+        .theme-section { background: #fdf2e9; border: 1px solid #f5b041; padding: 20px; border-radius: 5px; }
     </style>
 </head>
 <body>
     <div class="container">
-        <header>
-            <h1>Investment Report</h1>
-            <div class="date">Friday, February 6, 2026</div>
-        </header>
+        <h1>Investment Report - February 6, 2026</h1>
+        <p class="date-header">Generated on Friday, February 6, 2026</p>
+
+        <div class="summary-box">
+            <strong>Global Market Sentiment:</strong> Markets are currently under pressure with major indices sliding over 1% on Friday. A US government shutdown has delayed critical labor and inflation data, adding to uncertainty. Sentiment is dominated by the upcoming transition at the Federal Reserve and a "risk-off" mood across tech and crypto.
+        </div>
 
         <section id="macro">
             <h2>Section 1: Macro Update & Sentiment</h2>
             <ul>
-                <li><strong>Market Tone:</strong> Risk-off sentiment prevailed this week as US indices slid, led by a 1.59% drop in the NASDAQ. Investors are digesting a mixed January jobs report (60k jobs added but unemployment rising to 4.5%).</li>
-                <li><strong>Indices Performance:</strong>
-                    <br>Dow Jones: 48,908.72 (-1.2%)
-                    <br>NASDAQ: 22,540.59 (-1.59%)
-                    <br>S&P 500: 6,798.40 (-1.23%)
-                    <br>Europe: CAC 40 showed resilience (+0.20%), while FTSE 100 and DAX closed slightly lower.</li>
-                <li><strong>Commodities:</strong> Gold jumped 1.54% to $4,852.34/oz, reflecting safe-haven demand. Silver outperformed with a 3.01% gain to $72.97/oz.</li>
-                <li><strong>Central Bank Outlook:</strong> Kevin Warsh is confirmed to replace Jerome Powell as Fed Chair in May. Markets are skeptical of his "dovish" turn, watching for signs of aggressive rate cuts demanded by the administration.</li>
+                <li><strong>US Markets:</strong> Major indices saw significant declines. S&P 500 fell 1.23% to 6,798.40; Nasdaq dropped 1.59% to 22,540.59.</li>
+                <li><strong>European Markets:</strong> Downward trend continues with FTSE 100 (-0.9%) and Eurozone STOXX 50 (-0.8%) posting losses.</li>
+                <li><strong>Commodities:</strong> Gold slipped to ~$4,828/oz. Silver mixed, trading around $73-74/oz globally but seeing sharp intraday drops on domestic exchanges.</li>
+                <li><strong>Monetary Policy:</strong> <strong>Kevin Warsh</strong> has been named to replace Jerome Powell as Fed Chair in May 2026. While historically a hawk, markets are analyzing his recent dovish signals amidst political pressure.</li>
+                <li><strong>Data Delays:</strong> January Nonfarm Payrolls and CPI releases have been postponed (to Feb 11 and 13 respectively) due to the federal government shutdown.</li>
             </ul>
         </section>
 
@@ -145,45 +59,45 @@
                 <tbody>
                     <tr>
                         <td><strong>INOD</strong> (Innodata)</td>
-                        <td><span class="action-buy">BUY</span></td>
-                        <td>Major AI training partnership with Palantir; selected for US Missile Defense SHIELD program.</td>
+                        <td><span class="buy">BUY</span></td>
+                        <td>New partnership with Palantir; supplying AI training data for MDA's SHIELD program. Part of "Next Mag 7" portfolio.</td>
                         <td>Microcap Millionaire</td>
-                        <td>Feb 2, 2026</td>
+                        <td>Feb 02, 2026</td>
                     </tr>
                     <tr>
                         <td><strong>NNDM</strong> (Nano Dimension)</td>
-                        <td><span class="action-buy">BUY</span></td>
-                        <td>Fresh Money Buy. Up 20% YTD; trading at half book value with $500M cash position.</td>
+                        <td><span class="buy">BUY</span></td>
+                        <td>"Fresh Money Buy". Trading at half book value with $500M cash. Strong recovery base formed.</td>
                         <td>Microcap Millionaire</td>
-                        <td>Feb 2, 2026</td>
+                        <td>Feb 02, 2026</td>
                     </tr>
                     <tr>
                         <td><strong>DEFT</strong> (Defi Tech)</td>
-                        <td><span class="action-buy">BUY</span></td>
-                        <td>Double Down. Priced as distressed despite $2B AUM and substantial net income.</td>
+                        <td><span class="buy">BUY</span></td>
+                        <td>Double-down candidate. Significantly mispriced relative to earnings; $180M cash/investments vs $280M market cap.</td>
                         <td>Microcap Millionaire</td>
-                        <td>Feb 2, 2026</td>
+                        <td>Feb 02, 2026</td>
                     </tr>
                     <tr>
                         <td><strong>RR</strong> (Richtech Robotics)</td>
-                        <td><span class="action-buy">BUY</span></td>
-                        <td>Confirmed NVIDIA partnership for agentic automation. High-risk speculation on robotics.</td>
+                        <td><span class="hold">HOLD</span></td>
+                        <td>Mixed signals after Microsoft partnership confusion; NVIDIA partnership confirmed. Essential for robotics revolution.</td>
                         <td>Microcap Millionaire</td>
-                        <td>Feb 2, 2026</td>
+                        <td>Feb 02, 2026</td>
                     </tr>
                     <tr>
-                        <td><strong>CRNC</strong> (Cerence Inc.)</td>
-                        <td><span class="action-buy">BUY</span></td>
-                        <td>Leader in conversational AI for autos. xUI platform gaining traction with global OEMs.</td>
+                        <td><strong>CRNC</strong> (Cerence)</td>
+                        <td><span class="buy">BUY</span></td>
+                        <td>New xUI platform gaining traction with global automakers. Leader in conversational AI for autos.</td>
                         <td>Microcap Millionaire</td>
-                        <td>Feb 2, 2026</td>
+                        <td>Feb 02, 2026</td>
                     </tr>
                     <tr>
-                        <td><strong>NVTS</strong> (Navitas Semi)</td>
-                        <td><span class="action-buy">BUY</span></td>
-                        <td>Next-gen semiconductors (SiC/GaN). NVIDIA partner for high-efficiency power systems.</td>
+                        <td><strong>NVTS</strong> (Navitas)</td>
+                        <td><span class="buy">BUY</span></td>
+                        <td>NVIDIA partner focusing on high-efficiency silicon carbide and gallium nitride semiconductors.</td>
                         <td>Microcap Millionaire</td>
-                        <td>Feb 2, 2026</td>
+                        <td>Feb 02, 2026</td>
                     </tr>
                 </tbody>
             </table>
@@ -191,37 +105,35 @@
 
         <section id="theme">
             <h2>Section 3: Sector Deep Dive</h2>
-            <p><strong>Theme of the Week: AI & Robotics Infrastructure</strong></p>
-            <p>The market is shifting from speculative AI software to the <strong>foundational infrastructure</strong>. Recommendations this week focus on companies providing the "picks and shovels": Innodata (AI training data), Nano Dimension (3D printed electronics), and Navitas (efficient power semiconductors). Despite volatility in "Big Tech," these microcaps are establishing critical partnerships with industry titans like NVIDIA and Palantir.</p>
+            <div class="theme-section">
+                <h3>Theme of the Week: AI Infrastructure & "Little Tech" Resurgence</h3>
+                <p>Despite Big Tech volatility, the "Little Tech" (Microcaps) sector is showing resilience. The focus is shifting from generic AI hype to specific infrastructure plays: training data (Innodata), power-efficient semiconductors (Navitas), and agentic robotics (Richtech). The <strong>Next Mag 7</strong> portfolio emphasizes microcaps that are becoming indispensable partners to giants like NVIDIA, Palantir, and Microsoft.</p>
+            </div>
         </section>
 
         <section id="calendar">
             <h2>Section 4: Calendar (Next 14 Days)</h2>
-            <div class="calendar-item">
-                <span class="calendar-date">Feb 6, 2026</span>
-                <span>Earnings: Charter Hall Retail Reit (CQR), News Corp (NWS)</span>
-            </div>
-            <div class="calendar-item">
-                <span class="calendar-date">Feb 11, 2026</span>
-                <span>US Employment Data Release; Earnings: CBA, CSL, AGL Energy</span>
-            </div>
-            <div class="calendar-item">
-                <span class="calendar-date">Feb 12, 2026</span>
-                <span>US CPI (Inflation Data) - Critical for Rate Expectations</span>
-            </div>
-            <div class="calendar-item">
-                <span class="calendar-date">Feb 17, 2026</span>
-                <span>Earnings: BHP Group (BHP), Seek (SEK)</span>
-            </div>
-            <div class="calendar-item">
-                <span class="calendar-date">Feb 20, 2026</span>
-                <span>US Q4 GDP (Preliminary) & PCE Deflator (Fed's preferred inflation gauge)</span>
+            <div class="calendar-list">
+                <div class="calendar-item">
+                    <span class="calendar-date">Feb 6:</span> Live Subscriber Call (2 PM ET) - Chris Cimorelli; Earnings: Philip Morris (PM), Molina Healthcare (MOH), Cboe (CBOE).
+                </div>
+                <div class="calendar-item">
+                    <span class="calendar-date">Feb 9-10:</span> Earnings: Car Group, Amotiv. RBA Governor Bullock appearance.
+                </div>
+                <div class="calendar-item">
+                    <span class="calendar-date">Feb 11:</span> <strong>Delayed US Employment Report (NFP)</strong>; Earnings: Commonwealth Bank, CSL.
+                </div>
+                <div class="calendar-item">
+                    <span class="calendar-date">Feb 12:</span> Earnings: AMP, ASX, Origin Energy.
+                </div>
+                <div class="calendar-item">
+                    <span class="calendar-date">Feb 13:</span> <strong>Delayed US Inflation (CPI) Release</strong>; Earnings: Cochlear, Nick Scali.
+                </div>
+                <div class="calendar-item">
+                    <span class="calendar-date">Feb 16-20:</span> Earnings: Suncorp, BHP Group, Western Union, Transocean.
+                </div>
             </div>
         </section>
-
-        <div class="footer">
-            <p>Investment Research Report - Internal Use Only. Data accurate as of February 6, 2026.</p>
-        </div>
     </div>
 </body>
 </html>
