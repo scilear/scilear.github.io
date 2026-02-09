@@ -31,21 +31,23 @@
             margin: 0;
             font-size: 2.5em;
         }
+        .report-date {
+            color: #7f8c8d;
+            font-size: 1.1em;
+        }
+        section {
+            margin-bottom: 40px;
+        }
         h2 {
             color: #2980b9;
             border-left: 5px solid #2980b9;
             padding-left: 15px;
-            margin-top: 40px;
-        }
-        .date {
-            color: #7f8c8d;
-            font-style: italic;
+            margin-bottom: 20px;
         }
         table {
             width: 100%;
             border-collapse: collapse;
-            margin: 20px 0;
-            font-size: 0.9em;
+            margin-top: 10px;
         }
         th, td {
             text-align: left;
@@ -53,45 +55,66 @@
             border-bottom: 1px solid #ddd;
         }
         th {
-            background-color: #2c3e50;
-            color: white;
-        }
-        tr:hover {
-            background-color: #f1f1f1;
+            background-color: #f8f9fa;
+            color: #2c3e50;
         }
         .action-buy {
             color: #27ae60;
-            font-weight: bold;
-        }
-        .action-sell {
-            color: #e74c3c;
             font-weight: bold;
         }
         .action-hold {
             color: #f39c12;
             font-weight: bold;
         }
-        .sentiment-box {
+        .action-sell {
+            color: #c0392b;
+            font-weight: bold;
+        }
+        .macro-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .macro-card {
             background: #ecf0f1;
-            padding: 20px;
-            border-radius: 5px;
-            border-left: 5px solid #bdc3c7;
+            padding: 15px;
+            border-radius: 6px;
+            text-align: center;
+        }
+        .macro-card h3 {
+            margin: 0;
+            font-size: 0.9em;
+            color: #7f8c8d;
+        }
+        .macro-card p {
+            margin: 5px 0 0;
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        .calendar-list {
+            list-style: none;
+            padding: 0;
         }
         .calendar-item {
-            margin-bottom: 10px;
             padding: 10px;
-            background: #f9f9f9;
-            border-radius: 4px;
+            border-left: 3px solid #95a5a6;
+            margin-bottom: 10px;
+            background: #fafafa;
         }
         .calendar-date {
             font-weight: bold;
-            color: #e67e22;
+            color: #2c3e50;
+            display: block;
         }
-        .footer {
-            margin-top: 50px;
-            font-size: 0.8em;
-            color: #95a5a6;
+        footer {
             text-align: center;
+            font-size: 0.8em;
+            color: #bdc3c7;
+            margin-top: 50px;
+            border-top: 1px solid #eee;
+            padding-top: 20px;
         }
     </style>
 </head>
@@ -99,20 +122,39 @@
     <div class="container">
         <header>
             <h1>Investment Report</h1>
-            <p class="date">Monday, February 9, 2026</p>
+            <p class="report-date">Monday, February 9, 2026</p>
         </header>
 
         <section id="macro">
             <h2>Section 1: Macro Update & Sentiment</h2>
-            <div class="sentiment-box">
-                <p><strong>Market Tone:</strong> Global markets opened the week with significant momentum, following a record-breaking performance in the US. Cautious optimism prevails as investors rotate from "Big Tech" into "Little Tech" (Microcaps) and value sectors.</p>
-                <ul>
-                    <li><strong>US Indices:</strong> The Dow Jones Industrial Average surged 2.5%, crossing the historic 50,000 mark. Nasdaq climbed 2.2%.</li>
-                    <li><strong>Global Markets:</strong> Nikkei 225 jumped 5% on political developments. European markets (DAX, CAC 40) posted solid gains of 0.4% to 0.8%.</li>
-                    <li><strong>Commodities:</strong> Gold traded near record highs around $5,000/oz (+1.2% to 2%), while Silver surged over 4% to ~$81/oz. Oil prices dipped slightly (Brent $67.57, WTI $62.96).</li>
-                    <li><strong>Central Bank:</strong> Focus shifts to the Federal Reserve transition as Kevin Warsh is set to replace Jerome Powell in May. Markets anticipate a more aggressive stance on rate cuts under the new leadership.</li>
-                </ul>
+            <p>The global markets are entering a pivotal phase with <strong>Kevin Warsh</strong> confirmed to replace Jerome Powell as Fed Chair in May. Investors are pricing in a more dovish stance, fueling a massive rally in indices while the "Little Tech" (microcap) sector begins to outperform traditional "Magnificent 7" giants.</p>
+            <div class="macro-grid">
+                <div class="macro-card">
+                    <h3>S&P 500</h3>
+                    <p>6,932 (+1.97%)</p>
+                </div>
+                <div class="macro-card">
+                    <h3>Dow Jones</h3>
+                    <p>50,120 (+0.2%)</p>
+                </div>
+                <div class="macro-card">
+                    <h3>NASDAQ</h3>
+                    <p>23,031 (+1.4%)</p>
+                </div>
+                <div class="macro-card">
+                    <h3>Gold (Spot)</h3>
+                    <p>$5,030 (+1.23%)</p>
+                </div>
+                <div class="macro-card">
+                    <h3>Silver (Spot)</h3>
+                    <p>$82.48 (+4.67%)</p>
+                </div>
             </div>
+            <ul>
+                <li><strong>Sentiment:</strong> Bullish on commodities and microcaps; cautious on Big Tech valuation.</li>
+                <li><strong>Fed Shift:</strong> Anticipation of aggressive rate cuts under Warsh is driving liquidity into speculative assets.</li>
+                <li><strong>Geopolitical:</strong> Continued focus on AI-driven national security and missile defense.</li>
+            </ul>
         </section>
 
         <section id="recommendations">
@@ -131,77 +173,84 @@
                     <tr>
                         <td><strong>INOD</strong> (Innodata)</td>
                         <td class="action-buy">BUY</td>
-                        <td>Key partner for Palantir and US Missile Defense Agency; indispensable AI infrastructure play.</td>
+                        <td>Key AI training data provider; new Palantir partnership & US Missile Defense MDA contract.</td>
                         <td>Microcap Millionaire</td>
-                        <td>Feb 02, 2026</td>
+                        <td>Feb 2, 2026</td>
                     </tr>
                     <tr>
                         <td><strong>NNDM</strong> (Nano Dimension)</td>
-                        <td class="action-buy">BUY</td>
-                        <td>Fresh Money Buy. Trading at 0.5x book value; $500M cash position; +20% YTD.</td>
+                        <td class="action-buy">ALLOCATE</td>
+                        <td>Trading at 0.5x book value; $500M cash position; strong YTD momentum (+20%).</td>
                         <td>Microcap Millionaire</td>
-                        <td>Feb 02, 2026</td>
+                        <td>Feb 2, 2026</td>
                     </tr>
                     <tr>
-                        <td><strong>DEFT</strong> (Defi Technologies)</td>
-                        <td class="action-buy">BUY / DOUBLE DOWN</td>
-                        <td>Deeply mispriced relative to earnings; $180M cash/investments on $280M market cap.</td>
+                        <td><strong>DEFT</strong> (Defi Tech)</td>
+                        <td class="action-buy">BUY/DBL DN</td>
+                        <td>Significant earnings mispricing; >$2B AUM; CEO is original founder/offensive strategy.</td>
                         <td>Microcap Millionaire</td>
-                        <td>Feb 02, 2026</td>
+                        <td>Feb 2, 2026</td>
                     </tr>
                     <tr>
                         <td><strong>RR</strong> (Richtech Robotics)</td>
-                        <td class="action-buy">BUY</td>
-                        <td>Fresh Money Buy. Confirmed NVIDIA partnership; leader in agentic automation/robotics.</td>
+                        <td class="action-buy">SPECULATE</td>
+                        <td>NVIDIA partner for robotics; Microsoft partnership drama creates volatility/opportunity.</td>
                         <td>Microcap Millionaire</td>
-                        <td>Feb 02, 2026</td>
+                        <td>Feb 2, 2026</td>
                     </tr>
                     <tr>
                         <td><strong>CRNC</strong> (Cerence)</td>
-                        <td class="action-buy">BUY</td>
-                        <td>Fresh Money Buy. Global leader in automotive AI; xUI platform gaining major traction.</td>
+                        <td class="action-buy">ALLOCATE</td>
+                        <td>Leader in auto conversational AI; traction with xUI platform (NVIDIA/MSFT stack).</td>
                         <td>Microcap Millionaire</td>
-                        <td>Feb 02, 2026</td>
+                        <td>Feb 2, 2026</td>
                     </tr>
                     <tr>
-                        <td><strong>NVTS</strong> (Navitas Semi.)</td>
-                        <td class="action-buy">BUY</td>
-                        <td>Fresh Money Buy. Next-gen silicon carbide/gallium nitride chips; key NVIDIA partner.</td>
+                        <td><strong>NVTS</strong> (Navitas Semi)</td>
+                        <td class="action-buy">ALLOCATE</td>
+                        <td>NVIDIA partner; leader in GaN/SiC power semiconductors for AI data centers.</td>
                         <td>Microcap Millionaire</td>
-                        <td>Feb 02, 2026</td>
+                        <td>Feb 2, 2026</td>
                     </tr>
                 </tbody>
             </table>
         </section>
 
-        <section id="deep-dives">
-            <h2>Section 3: Sector Deep Dives</h2>
-            <p><strong>Theme of the Week: The Rise of "Little Tech"</strong></p>
-            <p>Data suggests a clear rotation where Microcaps are beginning to pull ahead of Big Tech. While Nvidia remains a staple, smaller partners in the AI ecosystem (Innodata, Navitas, Cerence) are offering higher "bang for your buck" as they secure critical roles in the AI and robotics revolutions. The "Next Mag 7" portfolio highlights a shift toward infrastructure providers rather than just application developers.</p>
+        <section id="theme">
+            <h2>Section 3: Sector Deep Dive</h2>
+            <p><strong>Theme of the Week: The Rise of "Little Tech" AI Infrastructure</strong></p>
+            <p>While the "Magnificent 7" has dominated the narrative, the real value is migrating to the picks-and-shovels of the AI revolution. Companies like <strong>Innodata</strong> (Data Engineering) and <strong>Navitas</strong> (Power Management) are becoming indispensable partners to NVIDIA and Palantir. The "Next Mag 7" report highlights a shift toward microcaps that provide the essential infrastructure for agentic AI and robotics.</p>
         </section>
 
         <section id="calendar">
-            <h2>Section 4: Calendar (Next 14 Days)</h2>
-            <div class="calendar-item">
-                <span class="calendar-date">Feb 10:</span> US Retail Sales, Advance Monthly Sales.
-            </div>
-            <div class="calendar-item">
-                <span class="calendar-date">Feb 11:</span> US Non-Farm Payrolls (delayed), Consumer Price Index (CPI).
-            </div>
-            <div class="calendar-item">
-                <span class="calendar-date">Feb 13:</span> US CPI Data release.
-            </div>
-            <div class="calendar-item">
-                <span class="calendar-date">Feb 18:</span> New Residential Construction (Housing Starts).
-            </div>
-            <div class="calendar-item">
-                <span class="calendar-date">Earnings:</span> Week of Feb 9 includes Spotify, Robinhood, Lyft, McDonald's, Cisco, Airbnb, Rivian, and Twilio.
+            <h2>Section 4: Calendar (Next 2 Weeks)</h2>
+            <div class="calendar-list">
+                <div class="calendar-item">
+                    <span class="calendar-date">Tuesday, Feb 10</span>
+                    US Retail Sales, Monthly Budget Statement. <strong>Earnings:</strong> KO, SPOT, BP, Ford.
+                </div>
+                <div class="calendar-item">
+                    <span class="calendar-date">Wednesday, Feb 11</span>
+                    US January Jobs Report (Nonfarm Payrolls), US CPI (Inflation). <strong>Earnings:</strong> MCD, CVS, Cisco.
+                </div>
+                <div class="calendar-item">
+                    <span class="calendar-date">Thursday, Feb 12</span>
+                    Existing Home Sales. <strong>Earnings:</strong> COIN, ABNB, ROKU, DraftKings.
+                </div>
+                <div class="calendar-item">
+                    <span class="calendar-date">Friday, Feb 13</span>
+                    Eurozone Q4 GDP. <strong>Earnings:</strong> Moderna, Wendy's.
+                </div>
+                <div class="calendar-item">
+                    <span class="calendar-date">Week of Feb 23</span>
+                    Focus on <strong>Navitas (NVTS)</strong> earnings and Lucid (LCID) market updates.
+                </div>
             </div>
         </section>
 
-        <div class="footer">
-            <p>Investment Report generated by Gemini CLI Analyst. This report is for informational purposes only and does not constitute financial advice.</p>
-        </div>
+        <footer>
+            <p>Internal Investment Research Report | Prepared by AI Analyst | Disclaimer: Not financial advice.</p>
+        </footer>
     </div>
 </body>
 </html>
