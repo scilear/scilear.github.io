@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investment Report - February 12, 2026</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f7f6;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            background: #fff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+        header {
+            border-bottom: 3px solid #2c3e50;
+            margin-bottom: 30px;
+            padding-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        h1 {
+            color: #2c3e50;
+            margin: 0;
+            font-size: 28px;
+        }
+        .date {
+            color: #7f8c8d;
+            font-size: 1.1em;
+        }
+        h2 {
+            background-color: #ecf0f1;
+            padding: 10px 15px;
+            border-left: 5px solid #3498db;
+            color: #2c3e50;
+            margin-top: 30px;
+        }
+        .summary-box {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        .stat-card {
+            background: #fff;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .stat-card .label {
+            display: block;
+            color: #7f8c8d;
+            font-size: 0.9em;
+            text-transform: uppercase;
+        }
+        .stat-card .value {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #2980b9;
+        }
+        .positive { color: #27ae60 !important; }
+        .negative { color: #e74c3c !important; }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            text-align: left;
+            padding: 12px 15px;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #f8f9fa;
+            color: #2c3e50;
+            text-transform: uppercase;
+            font-size: 0.85em;
+        }
+        .action-buy { font-weight: bold; color: #27ae60; background: #eafaf1; padding: 4px 8px; border-radius: 4px; }
+        .action-sell { font-weight: bold; color: #e74c3c; background: #fdedec; padding: 4px 8px; border-radius: 4px; }
+        .action-hold { font-weight: bold; color: #f39c12; background: #fef9e7; padding: 4px 8px; border-radius: 4px; }
+        
+        .deep-dive {
+            background: #fdfefe;
+            border: 1px solid #e0e0e0;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        .theme-tag {
+            display: inline-block;
+            background: #3498db;
+            color: white;
+            padding: 2px 10px;
+            border-radius: 12px;
+            font-size: 0.8em;
+            margin-bottom: 10px;
+        }
+        .footer {
+            margin-top: 50px;
+            text-align: center;
+            font-size: 0.8em;
+            color: #bdc3c7;
+            border-top: 1px solid #eee;
+            padding-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>Investment Research Report</h1>
+        <div class="date">Thursday, February 12, 2026</div>
+    </header>
+
+    <div class="summary-box">
+        <div class="stat-card">
+            <span class="label">S&P 500 (US500)</span>
+            <span class="value positive">6,968 (+0.38%)</span>
+        </div>
+        <div class="stat-card">
+            <span class="label">Euro Stoxx 50</span>
+            <span class="value positive">6,085 (+0.73%)</span>
+        </div>
+        <div class="stat-card">
+            <span class="label">Gold (Spot)</span>
+            <span class="value negative">$5,074 (-0.20%)</span>
+        </div>
+        <div class="stat-card">
+            <span class="label">Bitcoin (BTC)</span>
+            <span class="value negative">$67,580 (-1.5%)</span>
+        </div>
+    </div>
+
+    <h2>Section 1: Macro Update & Sentiment</h2>
+    <ul>
+        <li><strong>Selective Labor Strength:</strong> January payrolls surprised with 130,000 gains (double expectations), but revisions slashed prior year baselines. Hiring is defensive, concentrated in Healthcare, while high-wage cyclical sectors (Financials, Tech) show signs of slowing.</li>
+        <li><strong>The "Consumer Split":</strong> Earnings durability is fracturing. Luxury/Affluent names (Delta, United, Ralph Lauren) report robust demand, while mass-market staples (PepsiCo, Kraft Heinz) flag deferred purchases and value hunting.</li>
+        <li><strong>Geopolitical Friction:</strong> Trump faces setbacks in tariff agendas as the House voted to end levies on Canadian imports. However, private musings on exiting USMCA have injected fresh volatility into trade-sensitive assets.</li>
+        <li><strong>Bond Discipline:</strong> The 10-year yield's climb toward 4.17% is thinning rate-cut hopes for June, refocusing market attention on cash-flow-durable infrastructure plays.</li>
+    </ul>
+
+    <h2>Section 2: Recommendations Table</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Ticker/Asset</th>
+                <th>Action</th>
+                <th>Rationale / Status</th>
+                <th>Source</th>
+                <th>Date Sent</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>AMD</strong></td>
+                <td><span class="action-buy">SMASH (BUY)</span></td>
+                <td>Reasonable 32x 2026 earnings. Direct beneficiary of AI buildout. NVDA remains preferred but AMD is a strong 2nd.</td>
+                <td>Million Mission</td>
+                <td>Feb 11</td>
+            </tr>
+            <tr>
+                <td><strong>HOOD</strong></td>
+                <td><span class="action-buy">SMASH (BUY)</span></td>
+                <td>Evolution into full financial platform (Retirement, Advisory). Trading well below Oct highs despite growth.</td>
+                <td>Million Mission</td>
+                <td>Feb 11</td>
+            </tr>
+            <tr>
+                <td><strong>BTC</strong></td>
+                <td><span class="action-hold">BUY THE DIP</span></td>
+                <td>Dip is seen as temporary uncertainty over Market Structure Bill. States (Texas/NH) adding to treasuries.</td>
+                <td>Altucher Network</td>
+                <td>Feb 10</td>
+            </tr>
+            <tr>
+                <td><strong>VRT</strong></td>
+                <td><span class="action-hold">MOMENTUM</span></td>
+                <td>Exploded higher. Critical infrastructure for AI data centers (cooling/power).</td>
+                <td>FinancialNews</td>
+                <td>Feb 11</td>
+            </tr>
+            <tr>
+                <td><strong>LSEG</strong></td>
+                <td><span class="action-hold">STASH (WATCH)</span></td>
+                <td>Elliott activist stake. Betting on data moat exclusivity over AI displacement fears.</td>
+                <td>FinancialNews</td>
+                <td>Feb 11</td>
+            </tr>
+            <tr>
+                <td><strong>WMT</strong></td>
+                <td><span class="action-sell">TRASH (SELL)</span></td>
+                <td>Tech-style valuation (48x PE) without tech-style growth. Slower than S&P average.</td>
+                <td>Million Mission</td>
+                <td>Feb 11</td>
+            </tr>
+            <tr>
+                <td><strong>RGTI</strong></td>
+                <td><span class="action-sell">TRASH (SELL)</span></td>
+                <td>Early-stage hype. Commercial quantum 5-10 years away. Wait for lower entry.</td>
+                <td>Million Mission</td>
+                <td>Feb 11</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>Section 3: Sector Deep Dives</h2>
+    
+    <div class="deep-dive">
+        <span class="theme-tag">Theme of the Week: Infrastructure Fragility</span>
+        <p><strong>The Grid vs. AI:</strong> Recent cold snaps highlighted a load hierarchy. While crypto miners curtailed load, AI data centers maintained steady draw, absorbing power at all costs. Infrastructure advantage is accruing to companies that secure distribution resilience (e.g., Vertiv, Grid operators) rather than pure generation.</p>
+    </div>
+
+    <div class="deep-dive">
+        <span class="theme-tag">Strategic Shift: Rare Earths</span>
+        <p><strong>NdPr Futures:</strong> CME's launch of Neodymium-Praseodymium (NdPr) futures marks a major shift. This "market plumbing" allows Western producers to hedge spot price volatility previously controlled by China, potentially making domestic magnet/EV supply chains bankable for the first time.</p>
+    </div>
+
+    <div class="deep-dive">
+        <span class="theme-tag">The Space Migration</span>
+        <p><strong>Musk vs. Bezos:</strong> Timeline acceleration in Lunar infrastructure is real. NASA reopening Artemis contracts and SpaceX filing for orbital data centers signals a shift from "someday" to "immediate regulatory hurdle." AST Spacemobile (ASTS) continues to be the "pick and shovel" play to watch as Apple tests satellite compatibility.</p>
+    </div>
+
+    <h2>Section 4: Upcoming Calendar (Next 14 Days)</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Event / Indicator</th>
+                <th>Region</th>
+                <th>Expected / Importance</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Feb 12</td>
+                <td>Initial Jobless Claims</td>
+                <td>US</td>
+                <td>222K (High)</td>
+            </tr>
+            <tr>
+                <td>Feb 12</td>
+                <td>Existing Home Sales</td>
+                <td>US</td>
+                <td>Housing Market Pulse</td>
+            </tr>
+            <tr>
+                <td>Feb 12</td>
+                <td>GDP (Preliminary)</td>
+                <td>UK</td>
+                <td>Growth Momentum</td>
+            </tr>
+            <tr>
+                <td>Feb 13</td>
+                <td>CPI (Inflation)</td>
+                <td>US</td>
+                <td>Critical for Fed Policy</td>
+            </tr>
+            <tr>
+                <td>Feb 13</td>
+                <td>GDP (Quarterly)</td>
+                <td>Eurozone</td>
+                <td>Regional Health</td>
+            </tr>
+            <tr>
+                <td>Feb 17</td>
+                <td>Retail Sales</td>
+                <td>US</td>
+                <td>Consumer Durability</td>
+            </tr>
+            <tr>
+                <td>Feb 18</td>
+                <td>FOMC Minutes</td>
+                <td>US</td>
+                <td>Rate Path Clarity</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="footer">
+        &copy; 2026 Elite Investment Research. Generated for user fvernaz. For internal use only.
+    </div>
+</div>
+
+</body>
+</html>
