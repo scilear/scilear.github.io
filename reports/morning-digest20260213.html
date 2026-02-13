@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investment Report - February 13, 2026</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f4f7f6;
+        }
+        .container {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        header {
+            border-bottom: 2px solid #2c3e50;
+            margin-bottom: 30px;
+            padding-bottom: 10px;
+        }
+        h1 {
+            color: #2c3e50;
+            margin: 0;
+            font-size: 2.5em;
+        }
+        .date {
+            color: #7f8c8d;
+            font-size: 1.1em;
+        }
+        section {
+            margin-bottom: 40px;
+        }
+        h2 {
+            color: #2980b9;
+            border-left: 5px solid #2980b9;
+            padding-left: 15px;
+            margin-bottom: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            text-align: left;
+            padding: 12px;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #f8f9fa;
+            color: #2c3e50;
+        }
+        .action-buy {
+            color: #27ae60;
+            font-weight: bold;
+        }
+        .action-sell {
+            color: #c0392b;
+            font-weight: bold;
+        }
+        .action-hold {
+            color: #f39c12;
+            font-weight: bold;
+        }
+        .action-trash {
+            color: #7f8c8d;
+            font-weight: bold;
+            text-decoration: line-through;
+        }
+        .badge {
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.9em;
+            color: #fff;
+        }
+        .badge-buy { background-color: #27ae60; }
+        .badge-sell { background-color: #c0392b; }
+        .badge-hold { background-color: #f39c12; }
+        .badge-trash { background-color: #7f8c8d; }
+        
+        .macro-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .macro-card {
+            background: #fdfdfd;
+            border: 1px solid #e1e4e8;
+            padding: 20px;
+            border-radius: 6px;
+        }
+        .macro-card h3 {
+            margin-top: 0;
+            color: #34495e;
+        }
+        .theme-box {
+            background-color: #e8f4f8;
+            border: 1px solid #b8daff;
+            padding: 20px;
+            border-radius: 6px;
+            font-style: italic;
+        }
+        .calendar-list {
+            list-style: none;
+            padding: 0;
+        }
+        .calendar-item {
+            display: flex;
+            justify-content: flex-start;
+            padding: 8px 0;
+            border-bottom: 1px dashed #ccc;
+        }
+        .calendar-date {
+            font-weight: bold;
+            min-width: 120px;
+            color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Investment Report</h1>
+            <p class="date">Friday, February 13, 2026</p>
+        </header>
+
+        <section id="macro">
+            <h2>Section 1: Macro Update & Sentiment</h2>
+            <div class="macro-grid">
+                <div class="macro-card">
+                    <h3>Market Tone</h3>
+                    <ul>
+                        <li><strong>AI "Scare Trade":</strong> Sentiment shifted as investors questioned AI monetization. Logistics and Real Estate sectors hit hard by automation disruption fears.</li>
+                        <li><strong>Volatility Reset:</strong> Sharp tech-led selloff on Feb 12 was met with selective dip-buying on Feb 13.</li>
+                        <li><strong>Rates Outlook:</strong> Strong payrolls (130k) tempered expectations for near-term Fed rate cuts; timeline pushed to July.</li>
+                    </ul>
+                </div>
+                <div class="macro-card">
+                    <h3>Indices & Commodities</h3>
+                    <ul>
+                        <li><strong>S&P 500:</strong> 6,832.76 (-1.57% on Feb 12)</li>
+                        <li><strong>Nasdaq:</strong> 22,597.15 (-2.03% on Feb 12)</li>
+                        <li><strong>Gold:</strong> Rebounded after dipping; current spot ~4,923 (Previously hit $5,000).</li>
+                        <li><strong>Silver:</strong> Surged to 76.72 USD (+2.08% globally).</li>
+                    </ul>
+                </div>
+                <div class="macro-card">
+                    <h3>Geopolitical Risks</h3>
+                    <ul>
+                        <li><strong>Russia Dollar Pitch:</strong> Kremlin proposes return to US dollar trade as part of Ukraine peace deal negotiation.</li>
+                        <li><strong>US-China Friction:</strong> OpenAI accuses China's DeepSeek of "output extraction"; new restrictions on US Treasury holdings suggested by Beijing.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="recommendations">
+            <h2>Section 2: Recommendations Table</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Ticker/Asset</th>
+                        <th>Action</th>
+                        <th>Rationale/Status</th>
+                        <th>Source</th>
+                        <th>Date Sent</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>CGNX</strong></td>
+                        <td><span class="badge badge-sell">Sell HALF</span></td>
+                        <td>92% Gain on Tier 1 calls; profit target hit.</td>
+                        <td>Altucher's True Alpha</td>
+                        <td>Feb 12</td>
+                    </tr>
+                    <tr>
+                        <td><strong>LITE</strong></td>
+                        <td><span class="badge badge-sell">Sell ALL</span></td>
+                        <td>271% Gain booked; cashed in on earnings smash and buyout hype.</td>
+                        <td>Altucher's True Alpha</td>
+                        <td>Feb 09</td>
+                    </tr>
+                    <tr>
+                        <td><strong>AMD</strong></td>
+                        <td><span class="badge badge-buy">Smash (Buy)</span></td>
+                        <td>Valuation reasonable (32x 2026e); long-term AI cycle play.</td>
+                        <td>The Million Mission</td>
+                        <td>Feb 11</td>
+                    </tr>
+                    <tr>
+                        <td><strong>HOOD</strong></td>
+                        <td><span class="badge badge-buy">Smash (Buy)</span></td>
+                        <td>Expanding into full financial platform; priced 40%+ below peak.</td>
+                        <td>The Million Mission</td>
+                        <td>Feb 11</td>
+                    </tr>
+                    <tr>
+                        <td><strong>NVDA</strong></td>
+                        <td><span class="badge badge-buy">Buy</span></td>
+                        <td>Superior products and dominant moat compared to peers.</td>
+                        <td>The Million Mission</td>
+                        <td>Feb 11</td>
+                    </tr>
+                    <tr>
+                        <td><strong>LAES</strong></td>
+                        <td><span class="badge badge-buy">Buy @ &le;$6</span></td>
+                        <td>Quantum security leader; potential buyout target for Quobly.</td>
+                        <td>Altucher's Investment Network Pro</td>
+                        <td>Feb 09</td>
+                    </tr>
+                    <tr>
+                        <td><strong>BTC</strong></td>
+                        <td><span class="badge badge-buy">Buy the Dip</span></td>
+                        <td>"The Dip is a Lie"; fundamentals strong; institutional adoption rising.</td>
+                        <td>Altucher's Investment Network</td>
+                        <td>Feb 10</td>
+                    </tr>
+                    <tr>
+                        <td><strong>TAO</strong></td>
+                        <td><span class="badge badge-buy">Buy</span></td>
+                        <td>Bittensor cited as the "biggest thing since Bitcoin".</td>
+                        <td>Altucher's Investment Network</td>
+                        <td>Feb 09</td>
+                    </tr>
+                    <tr>
+                        <td><strong>RR</strong></td>
+                        <td><span class="badge badge-buy">Buy</span></td>
+                        <td>Richtech Robotics: Nvidia/Microsoft collaborations in robotics.</td>
+                        <td>Microcap Millionaire</td>
+                        <td>Feb 09</td>
+                    </tr>
+                    <tr>
+                        <td><strong>UBER</strong></td>
+                        <td><span class="badge badge-buy">Buy</span></td>
+                        <td>16x earnings; AVs viewed as a positive growth driver.</td>
+                        <td>The Million Mission</td>
+                        <td>Feb 06</td>
+                    </tr>
+                    <tr>
+                        <td><strong>CRM</strong></td>
+                        <td><span class="badge badge-buy">Buy</span></td>
+                        <td>Oversold (down 45%); aggressive buybacks; core infrastructure.</td>
+                        <td>The Million Mission</td>
+                        <td>Feb 06</td>
+                    </tr>
+                    <tr>
+                        <td><strong>NOW</strong></td>
+                        <td><span class="badge badge-buy">Buy</span></td>
+                        <td>Oversold (down 50%); 21x forward earnings; 98% retention.</td>
+                        <td>The Million Mission</td>
+                        <td>Feb 06</td>
+                    </tr>
+                    <tr>
+                        <td><strong>PYPL</strong></td>
+                        <td><span class="badge badge-buy">Buy</span></td>
+                        <td>Deep value at 7.5x earnings; sentiment extremely bearish.</td>
+                        <td>The Million Mission</td>
+                        <td>Feb 06</td>
+                    </tr>
+                    <tr>
+                        <td><strong>WMT</strong></td>
+                        <td><span class="badge badge-trash">Trash (Avoid)</span></td>
+                        <td>Tech-style valuation (48x) without the corresponding growth.</td>
+                        <td>The Million Mission</td>
+                        <td>Feb 11</td>
+                    </tr>
+                    <tr>
+                        <td><strong>RGTI</strong></td>
+                        <td><span class="badge badge-trash">Trash (Avoid)</span></td>
+                        <td>Quantum computing too early; years away from commercialization.</td>
+                        <td>The Million Mission</td>
+                        <td>Feb 11</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="sector">
+            <h2>Section 3: Sector Deep Dives</h2>
+            <div class="theme-box">
+                <h3>Theme of the Week: "From Narrative to Proof"</h3>
+                <p>The honeymoon phase of AI is ending. Markets are no longer rewarding "ambition" or "announced capex." Instead, the filter has tightened toward <strong>Physical Infrastructure</strong> and <strong>Monetizable Scarcity</strong>. The bottleneck has moved from software code to power availability, fab throughput (TSMC), and regulatory/zoning approvals. We are seeing a divergence where "Interface Software" is being sold off as a replacement risk, while "Systems of Record" and "Infrastructure Backbone" (Energy, Data Centers) remain high-conviction holds.</p>
+            </div>
+        </section>
+
+        <section id="calendar">
+            <h2>Section 4: Calendar (Next 14 Days)</h2>
+            <ul class="calendar-list">
+                <li class="calendar-item"><span class="calendar-date">Feb 13 (Today)</span> <span>US CPI (January); Eurozone GDP (Q4); Eurozone Trade Balance.</span></li>
+                <li class="calendar-item"><span class="calendar-date">Feb 16</span> <span>Market Holidays (US, Canada, China, etc.); Canada Housing Starts.</span></li>
+                <li class="calendar-item"><span class="calendar-date">Feb 17</span> <span>US Retail Sales; US Empire State Manufacturing Index; Canada CPI.</span></li>
+                <li class="calendar-item"><span class="calendar-date">Feb 18</span> <span>FOMC Minutes; UK CPI; US Industrial Production.</span></li>
+                <li class="calendar-item"><span class="calendar-date">Feb 19</span> <span>Japan CPI; Eurozone Current Account; Philadelphia Fed Index.</span></li>
+                <li class="calendar-item"><span class="calendar-date">Feb 23</span> <span>US Advance GDP (Q4); U. of Michigan Consumer Sentiment.</span></li>
+                <li class="calendar-item"><span class="calendar-date">Feb 27</span> <span>US Producer Price Index (PPI).</span></li>
+            </ul>
+        </section>
+    </div>
+</body>
+</html>
