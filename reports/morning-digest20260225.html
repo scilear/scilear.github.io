@@ -7,37 +7,37 @@
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 20px;
-            background-color: #f8f8f8;
-            color: #333;
             line-height: 1.6;
+            color: #333;
+            background-color: #f4f7f6;
+            margin: 0;
+            padding: 20px;
         }
         .container {
             max-width: 1000px;
             margin: auto;
             background: #fff;
-            padding: 30px;
+            padding: 40px;
             border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
         }
-        h1, h2, h3 {
+        h1 {
             color: #2c3e50;
             border-bottom: 2px solid #3498db;
             padding-bottom: 10px;
-            margin-top: 30px;
-        }
-        h1 {
             text-align: center;
-            border-bottom: none;
-            padding-bottom: 0;
-            margin-bottom: 20px;
+        }
+        h2 {
             color: #2980b9;
+            margin-top: 30px;
+            border-left: 5px solid #3498db;
+            padding-left: 15px;
         }
-        .date {
-            text-align: center;
-            font-size: 1.1em;
-            margin-bottom: 30px;
-            color: #7f8c8d;
+        .summary-box {
+            background-color: #ecf0f1;
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 20px;
         }
         table {
             width: 100%;
@@ -45,373 +45,147 @@
             margin-top: 20px;
         }
         th, td {
-            border: 1px solid #ddd;
-            padding: 10px;
             text-align: left;
+            padding: 12px;
+            border-bottom: 1px solid #ddd;
         }
         th {
-            background-color: #ecf0f1;
-            font-weight: bold;
+            background-color: #3498db;
+            color: white;
         }
-        .buy {
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+        .action-buy {
             color: #27ae60;
             font-weight: bold;
         }
-        .sell {
+        .action-sell {
             color: #e74c3c;
             font-weight: bold;
         }
-        .hold {
+        .action-hold {
             color: #f39c12;
             font-weight: bold;
         }
+        .footer {
+            margin-top: 40px;
+            text-align: center;
+            font-size: 0.9em;
+            color: #7f8c8d;
+        }
         ul {
-            list-style-type: disc;
-            margin-left: 20px;
+            padding-left: 20px;
         }
-        .macro-summary ul li {
-            margin-bottom: 5px;
-        }
-        .calendar ul li {
-            margin-bottom: 5px;
+        .tag {
+            display: inline-block;
+            padding: 3px 8px;
+            border-radius: 3px;
+            font-size: 0.85em;
+            margin-right: 5px;
+            background: #e0e0e0;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Investment Report</h1>
-        <p class="date">February 25, 2026</p>
+        <h1>Investment Report - February 25, 2026</h1>
 
-        <h2>Section 1: Macro Update & Sentiment</h2>
-        <div class="macro-summary">
-            <ul>
-                <li><strong>Market Indices:</strong> US markets (S&P 500, Dow, NASDAQ) generally show cautious gains. European markets are mixed with slight gains and losses.</li>
-                <li><strong>Precious Metals:</strong> Gold is experiencing an "extraordinary bull run," driven by safe-haven demand amidst geopolitical tensions and US trade tariffs. Silver prices also saw gains.</li>
-                <li><strong>Geopolitical Risks:</strong> Elevated tensions in the Middle East (US deployments, Iran nuclear deal deadline) and ongoing Russia-Ukraine conflict continue to fuel safe-haven demand and influence oil prices.</li>
-                <li><strong>Trade Policy:</strong> Uncertainty persists with new 15% global tariffs proposed by Trump, following a Supreme Court ruling against previous emergency tariffs. This creates legal challenges and impacts global trade.</li>
-                <li><strong>AI Impact:</strong> AI remains a dominant and disruptive theme, driving massive infrastructure spending (data centers, power, chips) but also leading to a re-evaluation of software companies and white-collar jobs. Concerns about AI's impact on productivity are noted.</li>
-                <li><strong>Central Bank Policy:</strong> Federal Reserve minutes indicate a "hawkish tilt," with some policymakers open to further rate hikes if inflation persists, contrary to market expectations for earlier cuts. Key labor and inflation data will be critical.</li>
-                <li><strong>Housing Market:</strong> The housing market remains slow due to high mortgage rates and competition for land, with AI data centers outbidding homebuilders in some areas.</li>
-                <li><strong>Consumer Confidence:</strong> US consumer confidence has ticked up, signaling some optimism despite uneven spending patterns.</li>
-                <li><strong>Credit Markets:</strong> Concerns are emerging in private credit, with warnings of potential parallels to the pre-2008 era and software loans facing pressure due to AI skepticism.</li>
-                <li><strong>Japanese Investments:</strong> Japan plans significant investments in US energy and critical minerals, and Prime Minister Takaichi's re-appointment and tax pledges are being watched.</li>
-            </ul>
+        <section id="macro">
+            <h2>Section 1: Macro Update & Sentiment</h2>
+            <div class="summary-box">
+                <p><strong>Market Tone:</strong> Mixed to Cautious. Markets are grappling with renewed trade uncertainty as Section 122 tariffs (15%) are invoked by the Trump administration. However, the World Trade Uncertainty Index is beginning to collapse from its highs, suggesting markets are "pricing in" the chaos.</p>
+                <ul>
+                    <li><strong>US Indices (Feb 24):</strong> S&P 500 (6,821, -0.24%), Nasdaq Composite (22,863, +1.04% - Tech resilience).</li>
+                    <li><strong>European Indices (Feb 24):</strong> DAX 40 (25,089, +0.39%), CAC 40 (8,519, +0.26%).</li>
+                    <li><strong>Commodities:</strong> Gold and Silver remain in a consolidation phase amid a strong Dollar and tariff-driven volatility.</li>
+                    <li><strong>Crypto:</strong> Bitcoin and Ethereum faced selling pressure, with BTC drifting toward $63,000 and ETH near $1,800.</li>
+                    <li><strong>Central Banks:</strong> Markets are eying May 15, when Kevin Warsh takes over as Fed Chairman with a perceived mandate for rate cuts.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="recommendations">
+            <h2>Section 2: Recommendations Table</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Ticker/Asset</th>
+                        <th>Action</th>
+                        <th>Rationale/Status</th>
+                        <th>Source</th>
+                        <th>Date Sent</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>INFQ</strong> (Infleqtion)</td>
+                        <td><span class="action-buy">BUY</span></td>
+                        <td>Quantum computing leader; NASA/Army contracts; NVIDIA partnership. SPAC merger successful. <strong>Buy up to $18.</strong></td>
+                        <td>Microcap Millionaire</td>
+                        <td>Feb 19, 2026</td>
+                    </tr>
+                    <tr>
+                        <td><strong>NVIDIA</strong></td>
+                        <td><span class="action-hold">HOLD/WATCH</span></td>
+                        <td>Earnings on Feb 25 are critical for tech sentiment. Partnership with INFQ confirms AI-Quantum convergence.</td>
+                        <td>Microcap Millionaire</td>
+                        <td>Feb 23, 2026</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="deep-dive">
+            <h2>Section 3: Sector Deep Dives</h2>
+            <p><strong>Theme of the Week: Quantum-AI Convergence</strong></p>
+            <p>The transition from traditional bits to qubits is moving from lab to commercialization. Infleqtion's room-temperature quantum computing is a significant milestone, distancing it from cryogenic-dependent peers. The NVIDIA partnership suggests that GPUs will soon be augmented by quantum processors for hyper-scale AI training and inference. This is a high-risk but high-reward frontier.</p>
+        </section>
+
+        <section id="calendar">
+            <h2>Section 4: Calendar (Next 14 Days)</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Event / Earnings</th>
+                        <th>Type</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Feb 25, 2026</td>
+                        <td><strong>NVIDIA Earnings</strong> (After Close)</td>
+                        <td>Earnings</td>
+                    </tr>
+                    <tr>
+                        <td>Feb 25, 2026</td>
+                        <td>US CB Consumer Confidence / Germany GDP</td>
+                        <td>Economic Data</td>
+                    </tr>
+                    <tr>
+                        <td>Feb 26, 2026</td>
+                        <td>US Jobless Claims / Durable Goods</td>
+                        <td>Economic Data</td>
+                    </tr>
+                    <tr>
+                        <td>Mar 2, 2026</td>
+                        <td>Global Manufacturing PMI (Final)</td>
+                        <td>Economic Data</td>
+                    </tr>
+                    <tr>
+                        <td>Mar 16, 2026</td>
+                        <td><strong>NVIDIA GTC Conference</strong> (Jensen Huang Keynote)</td>
+                        <td>Event</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <div class="footer">
+            <p>Investment Research Report - Generated on February 25, 2026</p>
+            <p><em>Disclaimer: For informational purposes only. Consult with a licensed advisor before making investment decisions.</em></p>
         </div>
-
-        <h2>Section 2: Recommendations Table</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th>Ticker/Asset</th>
-                    <th>Action</th>
-                    <th>Rationale/Status</th>
-                    <th>Source</th>
-                    <th>Date Sent</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>LASR (nLight Inc.)</td>
-                    <td class="buy">Buy Calls</td>
-                    <td>(March 20, 2026, $65 calls up to $7.50). Uniquely positioned to catch the eye of Elon Musk for Starlink expansion; stock soaring 8%; biggest buyout of the year is about to go public.</td>
-                    <td>Altucher's True Alpha (Zach Scheidt)</td>
-                    <td>Tue, 24 Feb 2026</td>
-                </tr>
-                <tr>
-                    <td>INFQ (Infleqtion, Inc.)</td>
-                    <td class="buy">Buy Shares</td>
-                    <td>(up to $18 per share). Quantum computing company partnered with NVIDIA; first to achieve neural-atom quantum computing at room temperature.</td>
-                    <td>Microcap Millionaire (Chris Cimorelli)</td>
-                    <td>Mon, 23 Feb 2026</td>
-                </tr>
-                <tr>
-                    <td>BE (Bloom Energy Corp.)</td>
-                    <td class="buy">Buy Shares</td>
-                    <td>(up to $180 per share). Builds modular power generators solving AI industry's bottleneck; massive underlying momentum and customer wins.</td>
-                    <td>Altucher's Investment Network Pro (Ray Blanco)</td>
-                    <td>Mon, 23 Feb 2026</td>
-                </tr>
-                <tr>
-                    <td>CVX (Chevron)</td>
-                    <td class="buy">Buy</td>
-                    <td>Warren Buffett’s Berkshire Hathaway added over 8 million shares.</td>
-                    <td>The Million Mission (Davis Wilson)</td>
-                    <td>Mon, 23 Feb 2026</td>
-                </tr>
-                <tr>
-                    <td>CB (Chubb Limited)</td>
-                    <td class="buy">Buy</td>
-                    <td>Warren Buffett’s Berkshire Hathaway new buy.</td>
-                    <td>The Million Mission (Davis Wilson)</td>
-                    <td>Mon, 23 Feb 2026</td>
-                </tr>
-                <tr>
-                    <td>DPZ (Domino’s Pizza)</td>
-                    <td class="buy">Buy</td>
-                    <td>Warren Buffett’s Berkshire Hathaway new buy.</td>
-                    <td>The Million Mission (Davis Wilson)</td>
-                    <td>Mon, 23 Feb 2026</td>
-                </tr>
-                <tr>
-                    <td>AAPL (Apple)</td>
-                    <td class="sell">Sell</td>
-                    <td>Warren Buffett’s Berkshire Hathaway continued to sell down positions.</td>
-                    <td>The Million Mission (Davis Wilson)</td>
-                    <td>Mon, 23 Feb 2026</td>
-                </tr>
-                <tr>
-                    <td>BAC (Bank of America)</td>
-                    <td class="sell">Sell</td>
-                    <td>Warren Buffett’s Berkshire Hathaway continued to sell down positions.</td>
-                    <td>The Million Mission (Davis Wilson)</td>
-                    <td>Mon, 23 Feb 2026</td>
-                </tr>
-                <tr>
-                    <td>STZ (Constellation Brands)</td>
-                    <td class="sell">Sell</td>
-                    <td>Warren Buffett’s Berkshire Hathaway sold position.</td>
-                    <td>The Million Mission (Davis Wilson)</td>
-                    <td>Mon, 23 Feb 2026</td>
-                </tr>
-                <tr>
-                    <td>META (Meta Platforms)</td>
-                    <td class="buy">Buy</td>
-                    <td>Bill Ackman’s Pershing Square new buy; David Tepper’s Appaloosa Management loading up.</td>
-                    <td>The Million Mission (Davis Wilson)</td>
-                    <td>Mon, 23 Feb 2026</td>
-                </tr>
-                <tr>
-                    <td>AMZN (Amazon)</td>
-                    <td class="buy">Buy</td>
-                    <td>Bill Ackman’s Pershing Square new buy; Brad Gerstner’s Altimeter Capital loading up.</td>
-                    <td>The Million Mission (Davis Wilson)</td>
-                    <td>Mon, 23 Feb 2026</td>
-                </tr>
-                <tr>
-                    <td>GOOG (Alphabet)</td>
-                    <td class="sell">Sell</td>
-                    <td>Bill Ackman’s Pershing Square sold position.</td>
-                    <td>The Million Mission (Davis Wilson)</td>
-                    <td>Mon, 23 Feb 2026</td>
-                </tr>
-                <tr>
-                    <td>CMG (Chipotle)</td>
-                    <td class="sell">Sell</td>
-                    <td>Bill Ackman’s Pershing Square sold position.</td>
-                    <td>The Million Mission (Davis Wilson)</td>
-                    <td>Mon, 23 Feb 2026</td>
-                </tr>
-                <tr>
-                    <td>UBER (Uber Technologies)</td>
-                    <td class="buy">Buy Shares</td>
-                    <td>(at $74 per share). Total Million Mission position size now 200 shares at an average of $80/share.</td>
-                    <td>The Million Mission (Davis Wilson)</td>
-                    <td>Sat, 21 Feb 2026</td>
-                </tr>
-                <tr>
-                    <td>NVDA (Nvidia)</td>
-                    <td class="buy">Buy</td>
-                    <td>Brad Gerstner’s Altimeter Capital loading up.</td>
-                    <td>The Million Mission (Davis Wilson)</td>
-                    <td>Mon, 23 Feb 2026</td>
-                </tr>
-                <tr>
-                    <td>MSFT (Microsoft)</td>
-                    <td class="buy">Buy</td>
-                    <td>Brad Gerstner’s Altimeter Capital loading up.</td>
-                    <td>The Million Mission (Davis Wilson)</td>
-                    <td>Mon, 23 Feb 2026</td>
-                </tr>
-                <tr>
-                    <td>CRWV (CoreWeave)</td>
-                    <td class="buy">Buy</td>
-                    <td>Brad Gerstner’s Altimeter Capital new position.</td>
-                    <td>The Million Mission (Davis Wilson)</td>
-                    <td>Mon, 23 Feb 2026</td>
-                </tr>
-                <tr>
-                    <td>AVGO (Broadcom)</td>
-                    <td class="sell">Sell</td>
-                    <td>Brad Gerstner’s Altimeter Capital sold position.</td>
-                    <td>The Million Mission (Davis Wilson)</td>
-                    <td>Mon, 23 Feb 2026</td>
-                </tr>
-                <tr>
-                    <td>HOOD (Robinhood)</td>
-                    <td class="sell">Sell</td>
-                    <td>Brad Gerstner’s Altimeter Capital sold position.</td>
-                    <td>The Million Mission (Davis Wilson)</td>
-                    <td>Mon, 23 Feb 2026</td>
-                </tr>
-                <tr>
-                    <td>BABA (Alibaba)</td>
-                    <td class="sell">Sell</td>
-                    <td>Brad Gerstner’s Altimeter Capital sold position; David Tepper’s Appaloosa Management selling off stake.</td>
-                    <td>The Million Mission (Davis Wilson)</td>
-                    <td>Mon, 23 Feb 2026</td>
-                </tr>
-                <tr>
-                    <td>ARM (Arm Holdings)</td>
-                    <td class="sell">Sell</td>
-                    <td>Brad Gerstner’s Altimeter Capital sold position.</td>
-                    <td>The Million Mission (Davis Wilson)</td>
-                    <td>Mon, 23 Feb 2026</td>
-                </tr>
-                <tr>
-                    <td>MU (Micron)</td>
-                    <td class="buy">Buy</td>
-                    <td>David Tepper’s Appaloosa Management loading up.</td>
-                    <td>The Million Mission (Davis Wilson)</td>
-                    <td>Mon, 23 Feb 2026</td>
-                </tr>
-                <tr>
-                    <td>AAL (American Airlines)</td>
-                    <td class="buy">Buy</td>
-                    <td>David Tepper’s Appaloosa Management loading up.</td>
-                    <td>The Million Mission (Davis Wilson)</td>
-                    <td>Mon, 23 Feb 2026</td>
-                </tr>
-                <tr>
-                    <td>JD (JD.com)</td>
-                    <td class="sell">Sell</td>
-                    <td>David Tepper’s Appaloosa Management selling off stake.</td>
-                    <td>The Million Mission (Davis Wilson)</td>
-                    <td>Mon, 23 Feb 2026</td>
-                </tr>
-                <tr>
-                    <td>KWEB (Chinese Tech ETF)</td>
-                    <td class="sell">Sell</td>
-                    <td>David Tepper’s Appaloosa Management selling off stake.</td>
-                    <td>The Million Mission (Davis Wilson)</td>
-                    <td>Mon, 23 Feb 2026</td>
-                </tr>
-                <tr>
-                    <td>INTC (Intel)</td>
-                    <td class="buy">Buy</td>
-                    <td>Nvidia owns $7.93 billion in Intel stock, which makes up 60% of Nvidia’s total portfolio.</td>
-                    <td>The Million Mission (Davis Wilson)</td>
-                    <td>Mon, 23 Feb 2026</td>
-                </tr>
-                <tr>
-                    <td>LLY (Eli Lilly)</td>
-                    <td class="buy">Buy</td>
-                    <td>Stronger product in weight-loss drugs compared to Novo; market rewarding clearer momentum.</td>
-                    <td>FinancialNews.com</td>
-                    <td>Mon, 23 Feb 2026</td>
-                </tr>
-                <tr>
-                    <td>NVO (Novo Nordisk)</td>
-                    <td class="sell">Sell</td>
-                    <td>Stock fell 15%; failed to prove drug as effective as Lilly’s.</td>
-                    <td>FinancialNews.com</td>
-                    <td>Mon, 23 Feb 2026</td>
-                </tr>
-                <tr>
-                    <td>NAK (Northern Dynasty Minerals)</td>
-                    <td class="sell">Sell</td>
-                    <td>DOJ defending EPA’s veto of Pebble Project; probability of project moving forward looks lower.</td>
-                    <td>The Million Mission (Davis Wilson)</td>
-                    <td>Fri, 20 Feb 2026</td>
-                </tr>
-                <tr>
-                    <td>CGNX (Cognex Corp.)</td>
-                    <td class="sell">Sell Shares/Calls</td>
-                    <td>(February 20, 2026, $35 calls at $19.50 / Sell shares). Locking in 67-82% gains after strong earnings.</td>
-                    <td>Altucher's True Alpha (Zach Scheidt) / Altucher's Investment Network (James Altucher)</td>
-                    <td>Fri, 20 Feb 2026</td>
-                </tr>
-                <tr>
-                    <td>TAO (Bittensor)</td>
-                    <td class="buy">Buy</td>
-                    <td>Cryptocurrency with potential for 500x return; real users, generating revenue, trading at a steep discount.</td>
-                    <td>Altucher's Investment Network (James Altucher, Ari Goldschmidt)</td>
-                    <td>Fri, 20 Feb 2026</td>
-                </tr>
-                <tr>
-                    <td>U (Unity Software Inc.)</td>
-                    <td class="hold">Hold/Watch</td>
-                    <td>Position down but plenty of time until April expiration; expecting software snapback.</td>
-                    <td>Altucher's True Alpha (Zach Scheidt)</td>
-                    <td>Fri, 20 Feb 2026</td>
-                </tr>
-                <tr>
-                    <td>MP (MP Materials Corp.)</td>
-                    <td class="hold">Hold</td>
-                    <td>Struggling but strong outlook due to critical importance to US mineral interests.</td>
-                    <td>Altucher's True Alpha (Zach Scheidt)</td>
-                    <td>Fri, 20 Feb 2026</td>
-                </tr>
-                <tr>
-                    <td>ASTS (AST SpaceMobile, Inc.)</td>
-                    <td class="buy">Buy Shares</td>
-                    <td>BlueBird 6 satellite successfully deployed massive antenna; $1 billion capital raise; preparing for Phase 2 (AI, defense contracts).</td>
-                    <td>Altucher's Investment Network (Ray Blanco)</td>
-                    <td>Wed, 18 Feb 2026</td>
-                </tr>
-                <tr>
-                    <td>NOW (ServiceNow)</td>
-                    <td class="buy">Buy Shares</td>
-                    <td>CEO Bill McDermott purchasing $3 million in stock; management believes stock is undervalued due to insider buying.</td>
-                    <td>The Million Mission (Davis Wilson)</td>
-                    <td>Wed, 18 Feb 2026</td>
-                </tr>
-                <tr>
-                    <td>NYT (New York Times Co.)</td>
-                    <td class="buy">Buy</td>
-                    <td>Warren Buffett’s Berkshire Hathaway entered a new stake, seen as Buffett's last new bet as CEO.</td>
-                    <td>Bloomberg (via Berkshire Hathaway 13F filing)</td>
-                    <td>Wed, 18 Feb 2026</td>
-                </tr>
-                <tr>
-                    <td>AMZN (Amazon)</td>
-                    <td class="sell">Sell</td>
-                    <td>Warren Buffett’s Berkshire Hathaway slashed its stake in Amazon by more than 75% in the fourth quarter.</td>
-                    <td>Bloomberg (via Berkshire Hathaway 13F filing)</td>
-                    <td>Wed, 18 Feb 2026</td>
-                </tr>
-            </tbody>
-        </table>
-
-        <h2>Section 3: Sector Deep Dives</h2>
-        <h3>Theme of the Week: AI's Infrastructure Gold Rush & Market Re-evaluation</h3>
-        <ul>
-            <li><strong>AI Demands Physical Infrastructure:</strong> The narrative around AI has shifted from purely digital to a massive physical buildout. This includes billions in capital expenditure for data centers, power generation, cooling systems, and advanced chips. This is creating new winners in infrastructure, energy, and semiconductor industries.</li>
-            <li><strong>Competition for Resources:</strong> The intense demand for AI infrastructure is leading to competition for physical resources. Data centers are outbidding homebuilders for land in key regions, impacting housing supply and affordability. Power grid capacity is a significant bottleneck, with innovative solutions like modular power generators (e.g., Bloom Energy) gaining prominence.</li>
-            <li><strong>Market Re-evaluation of Software:</strong> AI's disruptive potential is forcing a re-evaluation of traditional software companies. Concerns are rising that AI tools could make licensed software redundant or reduce pricing power. This is leading to pressure on high-multiple software stocks, with investors demanding clear monetization strategies and visible cash flows.</li>
-            <li><strong>Geopolitical Stakes in AI:</strong> The AI race is increasingly geopolitical, with nations like China backing their AI champions and concerns arising over the flow of advanced chips (e.g., Nvidia) across borders. Governments are becoming silent partners in the global AI rollout through subsidies and infrastructure support.</li>
-            <li><strong>Shift in Investment Criteria:</strong> The market is becoming more discerning, rewarding companies with durable balance sheets, disciplined operating plans, and clear strategies for navigating rising costs and changing trade policies. "Proof over promises" is the prevailing sentiment.</li>
-        </ul>
-
-        <h2>Section 4: Calendar</h2>
-        <h3>Key Earnings and Economic Data for the Next 2 Weeks (from February 25, 2026)</h3>
-        <h3>Economic Data:</h3>
-        <ul>
-            <li><strong>Wednesday, Feb 25, 2026:</strong>
-                <ul>
-                    <li>Germany GDP (final)</li>
-                    <li>Eurozone CPI (final)</li>
-                    <li>Australia Construction Work Done QoQ Q4</li>
-                    <li>US: CB Consumer Confidence FEB, Richmond Fed Manufacturing Index FEB, Wholesale Inventories MoM DEC, Dallas Fed Services Index FEB, Fed Barkin Speech, Fed Collins Speech.</li>
-                </ul>
-            </li>
-            <li><strong>Thursday, Feb 26, 2026:</strong>
-                <ul>
-                    <li>US: Durable Goods Orders (Jan P)</li>
-                    <li>Canada: Current Account (4Q)</li>
-                    <li>Japan: Leading Indicators (Dec F), Industrial Production (Jan P)</li>
-                </ul>
-            </li>
-            <li><strong>Friday, Feb 27, 2026:</strong>
-                <ul>
-                    <li>US: PPI (Jan)</li>
-                </ul>
-            </li>
-        </ul>
-        <h3>Selected Earnings Reports:</h3>
-        <ul>
-            <li><strong>Wednesday, Feb 25, 2026:</strong> Lowe's, NVIDIA CORPORATION, HSBC Holdings PLC, Diageo PLC, Aston Martin Lagonda Global Holdings PLC.</li>
-            <li>(Note: This is a selected list; numerous other companies report during this period.)</li>
-        </ul>
     </div>
 </body>
 </html>
