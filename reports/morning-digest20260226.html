@@ -7,47 +7,39 @@
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 20px;
-            background-color: #f4f7f6;
+            margin: 20px;
+            background-color: #f9f9f9;
             color: #333;
             line-height: 1.6;
         }
         .container {
             max-width: 900px;
-            margin: 20px auto;
-            background-color: #ffffff;
+            margin: auto;
+            background: #fff;
             padding: 30px;
             border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
-        h1 {
+        h1, h2, h3 {
             color: #2c3e50;
-            text-align: center;
-            margin-bottom: 25px;
-            font-size: 2.2em;
-        }
-        h2 {
-            color: #34495e;
-            border-bottom: 2px solid #ecf0f1;
+            border-bottom: 2px solid #3498db;
             padding-bottom: 10px;
             margin-top: 30px;
-            font-size: 1.6em;
         }
-        h3 {
-            color: #34495e;
-            margin-top: 20px;
-            font-size: 1.2em;
+        h1 {
+            text-align: center;
+            color: #2980b9;
         }
-        ul {
-            list-style-type: disc;
-            margin-left: 20px;
-            padding: 0;
+        .date {
+            text-align: center;
+            font-style: italic;
+            margin-bottom: 30px;
+            color: #7f8c8d;
         }
         table {
             width: 100%;
             border-collapse: collapse;
-            margin-top: 15px;
+            margin-top: 20px;
         }
         th, td {
             border: 1px solid #ddd;
@@ -55,79 +47,61 @@
             text-align: left;
         }
         th {
-            background-color: #ecf0f1;
-            color: #34495e;
+            background-color: #f2f2f2;
             font-weight: bold;
+            color: #555;
         }
-        .positive {
-            color: #27ae60;
-            font-weight: bold;
+        .buy { color: #27ae60; font-weight: bold; }
+        .sell { color: #c0392b; font-weight: bold; }
+        .hold { color: #f39c12; font-weight: bold; }
+        .summary-list li {
+            margin-bottom: 8px;
         }
-        .negative {
-            color: #c0392b;
-            font-weight: bold;
-        }
-        .neutral {
-            color: #2980b9;
-            font-weight: bold;
-        }
-        .disclaimer {
-            font-size: 0.9em;
-            color: #7f8c8d;
-            margin-top: 20px;
-            padding: 10px;
-            border-left: 3px solid #f39c12;
-            background-color: #fffaf0;
-        }
-        .footer {
-            text-align: center;
-            margin-top: 40px;
-            font-size: 0.85em;
-            color: #7f8c8d;
+        .macro-update ul, .calendar ul {
+            list-style-type: disc;
+            margin-left: 20px;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Investment Report - February 26, 2026</h1>
+        <h1>Investment Report</h1>
+        <p class="date">February 26, 2026</p>
 
-        <section id="macro-update">
-            <h2>1. Macro Update & Sentiment</h2>
-            <p>Global markets exhibited a generally positive sentiment, with major indices in both the US and Europe closing higher. Precious metals continued their upward trend, driven by safe-haven demand amidst geopolitical tensions and uncertainties.</p>
-            <h3>Market Indices (February 25, 2026 Close):</h3>
+        <section class="macro-update">
+            <h2>Macro Update & Sentiment</h2>
+            <h3>Global Market Tone:</h3>
             <ul>
-                <li><strong>US Markets:</strong>
-                    <ul>
-                        <li>S&P 500: <span class="positive">+0.81%</span> to 6,946.13</li>
-                        <li>Dow Jones Industrial Average: <span class="positive">+0.63%</span> to 49,482.15</li>
-                        <li>Nasdaq Composite: <span class="positive">+1.26%</span> to 23,152.08</li>
-                    </ul>
-                </li>
-                <li><strong>European Markets:</strong>
-                    <ul>
-                        <li>FTSE 100: <span class="positive">+1.18%</span> to 10,806.41</li>
-                        <li>DAX: <span class="positive">+0.76%</span> to 25,175.94</li>
-                        <li>CAC 40: <span class="positive">+0.47%</span> to 8,559.07</li>
-                        <li>Euro Stoxx 50: <span class="positive">+0.45%</span>, reaching a new record high of 6,148.56</li>
-                    </ul>
-                </li>
+                <li><strong>US Markets:</strong> Mixed. S&P 500 and Dow Jones showed slight increases on Feb 25, with Nasdaq Composite climbing more significantly. Futures for all three showed slight dips on Feb 26.</li>
+                <li><strong>European Markets:</strong> Mixed performance on Feb 26 (Euro STOXX 50, STOXX Europe 600, FTSE 100, DAX, and CAC 40), with some gaining and some slightly down after reaching recent record highs.</li>
+                <li><strong>Overall:</strong> Mixed sentiment, with strength in some areas offset by slight pullbacks or wavering in others.</li>
             </ul>
 
-            <h3>Commodities (February 26, 2026):</h3>
+            <h3>Central Bank News:</h3>
             <ul>
-                <li><strong>Gold:</strong> Spot gold up approximately <span class="positive">0.41%-1%</span>, trading around $5,181.46-$5,186.09 per ounce. US gold futures also saw a <span class="positive">0.3%</span> increase.</li>
-                <li><strong>Silver:</strong> Spot silver rose significantly by <span class="positive">3.59%</span> to $90.30 per ounce, driven by safe-haven demand and geopolitical factors.</li>
+                <li><strong>US Federal Reserve:</strong> Governor Michelle Bowman scheduled to deliver remarks on Feb 26, potentially offering insights into future monetary policy.</li>
+                <li><strong>European Central Bank (ECB):</strong> President Christine Lagarde to speak on Feb 26 about the euro area's economic outlook and monetary policy. Euro area inflation declined in January, and real wages have recovered.</li>
             </ul>
 
-            <h3>Key Macroeconomic Drivers:</h3>
+            <h3>Commodities:</h3>
             <ul>
-                <li>Precious metals rallied due to ongoing geopolitical tensions, US tariff policies, and a weakening US dollar, fueling safe-haven demand.</li>
-                <li>Upcoming US jobless claims and Producer Price Index (PPI) data, alongside commentary from FOMC members, will be key in shaping monetary policy expectations.</li>
+                <li><strong>Gold:</strong> Slight decrease in India, globally around $5203.80/oz with minor daily change. J.P. Morgan and Goldman Sachs have upwardly revised gold price forecasts for late 2026.</li>
+                <li><strong>Silver:</strong> Stable in India, fell 2.22% internationally. J.P. Morgan projected $81/oz average for 2026.</li>
             </ul>
+
+            <h3>Geopolitical Risks:</h3>
+            <ul>
+                <li><strong>US-Iran Tensions:</strong> Ongoing US military deployments and potential for limited military strikes on Iran continue to be a significant concern, pushing oil prices higher. Trump has given Iran an ultimatum on a nuclear deal.</li>
+                <li><strong>Trade Wars/Tariffs:</strong> Donald Trump's new global tariffs (15%) and policy changes create uncertainty. Supreme Court struck down previous tariffs, but administration seeks alternative legal tools. Affects global trade, potentially increasing UK export costs.</li>
+                <li><strong>Russia-Ukraine:</strong> Rising Russian battlefield casualties, EU plans to ban Russian oil imports.</li>
+            </ul>
+
+            <h3>Theme of the Week:</h3>
+            <p>AI's pervasive impact across sectors, significant capital spending on AI infrastructure, regulatory scrutiny, and new technological advancements like quantum computing. Also, ongoing shifts in global trade policy and risks in the private credit market.</p>
         </section>
 
-        <section id="recommendations">
-            <h2>2. Recommendations Table</h2>
+        <section class="recommendations">
+            <h2>Trade Recommendations</h2>
             <table>
                 <thead>
                     <tr>
@@ -139,42 +113,83 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td colspan="5" class="disclaimer">No specific email-based trade recommendations were available for extraction in this report. This section relies on parsing emails, which was not feasible for this report due to tool limitations.</td>
-                    </tr>
+                    <tr><td class="ticker">Oracle</td><td class="sell">Short</td><td>Eyes up to $50 billion in new funding.</td><td>FinancialNews.com</td><td>Feb 25, 2026</td></tr>
+                    <tr><td class="ticker">SHLS</td><td class="hold">Hold</td><td>Dominant market position in Electrical Balance of System (EBOS) market within US solar, revenue grew 39% year-over-year.</td><td>Microcap Millionaire</td><td>Feb 25, 2026</td></tr>
+                    <tr><td class="ticker">NVDA</td><td class="buy">Buy/Hold (Implied bullish)</td><td>Strong fundamentals, spending, constrained supply, negative sentiment already baked in. Target: $205.</td><td>Altucher's True Alpha</td><td>Feb 25, 2026</td></tr>
+                    <tr><td class="ticker">UBER</td><td class="buy">Buy</td><td>Buying shares on weakness. Autonomous vehicles strengthen Uber's marketplace by solving supply constraints.</td><td>Altucher's True Alpha</td><td>Feb 25, 2026</td></tr>
+                    <tr><td class="ticker">Bitcoin</td><td class="buy">Buy/Hold (Implied bullish long-term)</td><td>Outlier asset that survives brutal drawdowns and makes new highs.</td><td>Altucher's True Alpha</td><td>Feb 25, 2026</td></tr>
+                    <tr><td class="ticker">Unspecified $5 Stock</td><td class="buy">Buy</td><td>Surged 200-300%+ in weeks after Trump administration backing.</td><td>FinancialNews.com</td><td>Feb 25, 2026</td></tr>
+                    <tr><td class="ticker">Gold</td><td class="buy">Buy/Hold (Implied bullish)</td><td>Strange plan by powerful men could spark biggest gold frenzy. "move your money to his No. 1 gold stock immediately (1,000% upside potential.)"</td><td>FinancialNews.com</td><td>Feb 25, 2026</td></tr>
+                    <tr><td class="ticker">AMD</td><td class="buy">Buy/Hold (Implied bullish)</td><td>Long-duration alignment with Meta, strengthens AMD's footing against Nvidia.</td><td>FinancialNews.com</td><td>Feb 24, 2026</td></tr>
+                    <tr><td class="ticker">Gold</td><td class="buy">Prepare/Buy (Implied bullish)</td><td>Fueled by global uncertainty, inflation, central bank buying.</td><td>FinancialNews.com</td><td>Feb 24, 2026</td></tr>
+                    <tr><td class="ticker">Memecoin (Unspecified)</td><td class="buy">Buy</td><td>Community growth accelerating, catalysts firing, real utility, capped supply, rare institutional interest.</td><td>FinancialNews.com</td><td>Feb 24, 2026</td></tr>
+                    <tr><td class="ticker">Bloom Energy (BE)</td><td class="buy">Buy</td><td>Solves AI industry's critical bottleneck: fast efficient power.</td><td>Altucher's Investment Network Pro</td><td>Feb 24, 2026</td></tr>
+                    <tr><td class="ticker">LASR</td><td class="buy">Buy Calls</td><td>Blue Spike indicator, uniquely positioned to catch Elon Musk's eye for Starlink expansion, potential acquisition target for Elon.</td><td>Altucher's True Alpha</td><td>Feb 24, 2026</td></tr>
+                    <tr><td class="ticker">Unspecified "SpaceX Access Code"</td><td class="buy">Buy pre-IPO stake (implied)</td><td>Biggest wealth-building event of the decade.</td><td>FinancialNews.com</td><td>Feb 24, 2026</td></tr>
+                    <tr><td class="ticker">Unspecified stock tied to Executive Order 14330</td><td class="buy">Invest (implied)</td><td>$216 trillion opportunity.</td><td>FinancialNews.com</td><td>Feb 24, 2026</td></tr>
+                    <tr><td class="ticker">Bloom Energy Corp. (BE)</td><td class="buy">Buy (Implied)</td><td>Solves AI industry's critical bottleneck: fast efficient power.</td><td>Altucher's Investment Network Pro</td><td>Feb 24, 2026</td></tr>
+                    <tr><td class="ticker">LASR</td><td class="buy">Buy Calls</td><td>Blue Spike indicator, uniquely positioned to catch Elon Musk's eye for Starlink expansion, potential acquisition target for Elon.</td><td>Altucher's True Alpha</td><td>Feb 24, 2026</td></tr>
+                    <tr><td class="ticker">Merck</td><td class="sell">Watch/Sell (Implied caution)</td><td>Keytruda patent expires in 2028, nearly half of revenue. Reorganizing before cliff arrives.</td><td>FinancialNews.com</td><td>Feb 23, 2026</td></tr>
+                    <tr><td class="ticker">Unspecified crypto</td><td class="buy">Buy (Implied)</td><td>"One coin is flashing those signals right now and still trades at a steep discount."</td><td>FinancialNews.com</td><td>Feb 23, 2026</td></tr>
+                    <tr><td class="ticker">INFQ</td><td class="buy">Buy</td><td>Quantum computing company partnered with NVIDIA, "only scalable form of quantum computing that exists", real revenues with NASA, US Army.</td><td>Microcap Millionaire</td><td>Feb 23, 2026</td></tr>
+                    <tr><td class="ticker">CVX, CB, DPZ</td><td class="buy">Buy</td><td>Warren Buffett's buys in Q4.</td><td>The Million Mission</td><td>Feb 23, 2026</td></tr>
+                    <tr><td class="ticker">META, AMZN</td><td class="buy">Buy</td><td>Bill Ackman's and Brad Gerstner's buys.</td><td>The Million Mission</td><td>Feb 23, 2026</td></tr>
+                    <tr><td class="ticker">NVDA, MSFT, AMZN, CRWV</td><td class="buy">Buy</td><td>Brad Gerstner's buys.</td><td>The Million Mission</td><td>Feb 23, 2026</td></tr>
+                    <tr><td class="ticker">MU, META, GOOG, AAL</td><td class="buy">Buy</td><td>David Tepper's buys. Loading up on large cap tech.</td><td>The Million Mission</td><td>Feb 23, 2026</td></tr>
+                    <tr><td class="ticker">BABA, JD, KWEB</td><td class="sell">Sell</td><td>David Tepper's sells. Tepper selling off his stake.</td><td>The Million Mission</td><td>Feb 23, 2026</td></tr>
+                    <tr><td class="ticker">Unspecified company partner with Nvidia</td><td class="buy">Invest/Buy (Implied)</td><td>250 patents, partnered with Nvidia, set new world speed record.</td><td>FinancialNews.com</td><td>Feb 23, 2026</td></tr>
+                    <tr><td class="ticker">Unspecified Altcoin</td><td class="buy">Buy</td><td>"One altcoin is positioned at the center, strong cash flow, shrinking supply, and trading far below peers."</td><td>FinancialNews.com</td><td>Feb 23, 2026</td></tr>
+                    <tr><td class="ticker">UBER</td><td class="buy">Buy</td><td>Bought 60 shares at $74, total position 200 shares at $80/share. Autonomous vehicles strengthen the marketplace.</td><td>The Million Mission</td><td>Feb 21, 2026</td></tr>
+                    <tr><td class="ticker">NAK</td><td class="sell">Sell</td><td>Odds of Pebble Project approval look slim, original thesis weakened, exiting with a gain.</td><td>The Million Mission</td><td>Feb 21, 2026</td></tr>
+                    <tr><td class="ticker">Bitcoin</td><td class="hold">Hold/Allocate 5-10% (Longer-term timeline)</td><td>Benefits from upside, small enough that volatility won’t derail overall plan.</td><td>The Million Mission</td><td>Feb 21, 2026</td></tr>
+                    <tr><td class="ticker">FNMA</td><td class="hold">Hold</td><td>My decision comes down to one thing: ending conservatorship. If FNMA is released, equity story changes.</td><td>The Million Mission</td><td>Feb 21, 2026</td></tr>
+                    <tr><td class="ticker">Unspecified company partnered with Nvidia</td><td class="buy">Invest/Buy (Implied)</td><td>Silicon is dead, partnered with Nvidia.</td><td>FinancialNews.com</td><td>Feb 21, 2026</td></tr>
+                    <tr><td class="ticker">Unspecified Crypto</td><td class="buy">Buy</td><td>Tearing apart financial system with near-instant, low-cost transactions; major companies adopting.</td><td>FinancialNews.com</td><td>Feb 21, 2026</td></tr>
+                    <tr><td class="ticker">CGNX</td><td class="sell">Sold (67% gain)</td><td>Market got ahead of itself, environment punishing software stocks.</td><td>The Altucher Alliance</td><td>Feb 20, 2026</td></tr>
+                    <tr><td class="ticker">INFQ</td><td class="buy">Buy (Implied)</td><td>Quantum computing company partnered with NVIDIA.</td><td>The Altucher Alliance</td><td>Feb 20, 2026</td></tr>
+                    <tr><td class="ticker">U</td><td class="hold">Hold (Tier 1), Expiring (Tier 2)</td><td>Caught up in software selling, but expect snapback.</td><td>The Altucher Alliance</td><td>Feb 20, 2026</td></tr>
+                    <tr><td class="ticker">MP</td><td class="hold">Hold</td><td>Struggling, but outlook strong due to critical importance to US mineral interests.</td><td>The Altucher Alliance</td><td>Feb 20, 2026</td></tr>
+                    <tr><td class="ticker">Bittensor (TAO)</td><td class="buy">Buy</td><td>"A cryptocurrency that does have the potential to return 500 times." "Marketplace for artificial intelligence," real users, beginning to generate revenue, trades at a steep discount.</td><td>Altucher's Investment Network</td><td>Feb 20, 2026</td></tr>
+                    <tr><td class="ticker">Software Sector (unspecified)</td><td class="buy">Buy (Implied "snap-back attack")</td><td>Significantly oversold, herd has punished these names.</td><td>Altucher's True Alpha</td><td>Feb 20, 2026</td></tr>
+                    <tr><td class="ticker">Infrastructure names (unspecified)</td><td class="buy">Buy (Implied)</td><td>Explosive run, massive underlying momentum.</td><td>Altucher's True Alpha</td><td>Feb 20, 2026</td></tr>
+                    <tr><td class="ticker">CGNX</td><td class="sell">Sold (90% and 92% gains)</td><td>Smash hit earnings.</td><td>Altucher's True Alpha</td><td>Feb 20, 2026</td></tr>
+                    <tr><td class="ticker">CGNX Options</td><td class="sell">Sell Calls</td><td>Position sitting solidly in positive territory, 82% gain.</td><td>Altucher's True Alpha</td><td>Feb 20, 2026</td></tr>
+                    <tr><td class="ticker">CGNX</td><td class="sell">Sell</td><td>Lock in roughly 67% gain from initial investment. Market punishing software stocks, environment not for holding.</td><td>Altucher's Investment Network</td><td>Feb 20, 2026</td></tr>
+                    <tr><td class="ticker">Unspecified stock positioned to benefit from gold reset</td><td class="buy">Buy (Implied)</td><td>Gold reset, coordinated ambush.</td><td>FinancialNews.com</td><td>Feb 19, 2026</td></tr>
+                    <tr><td class="ticker">INFQ</td><td class="buy">Buy up to $18 per share</td><td>First company to achieve "neural-atom quantum computing", only scalable form, partnered with NVIDIA, real revenues with NASA, US Army.</td><td>Microcap Millionaire</td><td>Feb 19, 2026</td></tr>
+                    <tr><td class="ticker">Unspecified Crypto</td><td class="buy">Buy (Implied)</td><td>"One coin is flashing those signals right now and still trades at a steep discount."</td><td>FinancialNews.com</td><td>Feb 19, 2026</td></tr>
+                    <tr><td class="ticker">Unspecified AI stock</td><td class="buy">Buy (Implied)</td><td>Quietly climbing despite AI fears.</td><td>FinancialNews.com</td><td>Feb 19, 2026</td></tr>
+                    <tr><td class="ticker">Unspecified stock from Dark Pool A.I.</td><td class="buy">Buy/Sell (Implied by alerts)</td><td>Detects unusual institutional buying or selling.</td><td>FinancialNews.com</td><td>Feb 19, 2026</td></tr>
                 </tbody>
             </table>
         </section>
 
-        <section id="sector-deep-dives">
-            <h2>3. Sector Deep Dives</h2>
-            <h3>Theme of the Week: Commodities and Geopolitical Resilience</h3>
-            <p>The notable performance of precious metals, coupled with underlying geopolitical tensions and uncertainties in global trade policies, highlights the resilience and increased demand for commodities as safe-haven assets. This theme is expected to persist as investors navigate a complex global landscape.</p>
-            <p>While numerous companies are reporting earnings this week, the broader market narrative is currently being shaped more by macroeconomic shifts and geopolitical developments impacting commodity prices and investor sentiment.</p>
-        </section>
-
-        <section id="calendar">
-            <h2>4. Upcoming Calendar (February 26, 2026 - March 4, 2026)</h2>
-            <h3>Economic Data:</h3>
+        <section class="calendar">
+            <h2>Calendar: Key Earnings and Economic Data (Next 7 Days)</h2>
             <ul>
-                <li><strong>February 26 (Thu):</strong> US Initial & Continuing Jobless Claims, FOMC Member Bowman Speech, US 7-Year Note Auction.</li>
-                <li><strong>February 27 (Fri):</strong> Germany Prelim CPI m/m, US Core PPI m/m & PPI m/m.</li>
-                <li><strong>March 2 (Mon):</strong> US Construction Spending SA M/M.</li>
-                <li><strong>March 4 (Wed):</strong> US ISM Services Business Activity, Employment, and PMI SA.</li>
-            </ul>
-            <h3>Selected Earnings Reports:</h3>
-            <ul>
-                <li><strong>February 26 (Thu):</strong> American Bitcoin Corp. (ABTC), ACI Worldwide Inc. (ACIW), ACM Research Inc. (ACMR), Baidu Inc ADR (BIDU), etc.</li>
-                <li><strong>February 27 (Fri):</strong> Full schedule of earnings releases anticipated.</li>
-                <li><strong>March 2 (Mon):</strong> Advanced Flower Capital Inc. (AFCG), Abercrombie & Fitch Co. (ANF), Bath & Body Works Inc. (BBWI), etc.</li>
-                <li><strong>March 3 (Tue):</strong> Approximately 61 companies scheduled to report.</li>
-                <li><strong>March 4 (Wed):</strong> Approximately 78 companies scheduled to report.</li>
+                <li><strong>February 26, 2026:</strong>
+                    <ul>
+                        <li><strong>US:</strong> Initial Jobless Claims, Continuing Jobless Claims, 4-week average of jobless claims, natural gas storage figures, KC Fed Composite and Manufacturing Indexes. Fed Governor Michelle Bowman remarks. Treasury 7-year note auction.</li>
+                        <li><strong>Europe:</strong> ECB President Christine Lagarde speech. Business and consumer sentiment data for February.</li>
+                        <li><strong>Australia:</strong> Building Capital Expenditure QoQ Q4.</li>
+                        <li><strong>South Korea:</strong> Producer prices (Jan).</li>
+                        <li><strong>Japan:</strong> Cabinet Office Leading Index.</li>
+                        <li><strong>New Zealand:</strong> ANZ Business Outlook survey.</li>
+                        <li><strong>Earnings:</strong> Avation PLC, Burford Capital Ltd, CVS Group PLC, Derwent London PLC, Drax Group PLC, Genus PLC, Greencoat UK Wind PLC, Hikma Pharmaceuticals PLC, Howden Joinery Group PLC, Jadestone Energy PLC, Jupiter Fund Management PLC (UK). American Bitcoin Corp., ACI Worldwide Inc., ACM Research Inc., Acme United Corp., Akebia Therapeutics Inc., Ardagh Metal Packaging S.A., Anika Therapeutics Inc., Arbe Robotics Ltd., Argen X SE ADR, Anika Therapeutics Inc., Arhaus Inc., Aurinia Pharmaceuticals Inc., Biocryst Pharmaceuticals Inc., Butterfly Network Inc., Baidu Inc ADR (US). WPP H2 2025.</li>
+                    </ul>
+                </li>
+                <li><strong>Within the next 7 days (General categories):</strong>
+                    <ul>
+                        <li>Various PMI data (Manufacturing and Services) for Eurozone, UK, US.</li>
+                        <li>Interest Rate Decisions for various countries.</li>
+                        <li>US employment figures (Average Hourly Earnings, Non-Farm Employment Change).</li>
+                        <li>US Core Retail Sales and Retail Sales m/m.</li>
+                        <li>CPI data for US and Eurozone.</li>
+                        <li>GDP data for UK and US.</li>
+                    </ul>
+                </li>
             </ul>
         </section>
-
-        <div class="footer">
-            <p>Generated by Investment Research Analyst Bot on February 26, 2026. Data sourced from public web searches.</p>
-        </div>
     </div>
 </body>
 </html>
