@@ -3,155 +3,206 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Investment Report - March 9, 2026</title>
+    <title>Daily Trade Signal Report - March 9, 2026 - March 9, 2026</title>
     <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #3498db;
+            --bg-color: #f8f9fa;
+            --card-bg: #ffffff;
+            --text-color: #333333;
+            --success-color: #27ae60;
+            --warning-color: #f39c12;
+            --danger-color: #c0392b;
+        }
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 20px;
-            background-color: #f4f7f6;
-            color: #333;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
             line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 20px;
         }
         .container {
-            max-width: 900px;
-            margin: auto;
-            background: #ffffff;
-            padding: 30px;
+            max-width: 1000px;
+            margin: 0 auto;
+            background-color: var(--card-bg);
+            padding: 40px;
             border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
-        h1, h2, h3 {
-            color: #2c3e50;
-            border-bottom: 2px solid #ecf0f1;
-            padding-bottom: 10px;
-            margin-top: 30px;
+        header {
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
         h1 {
-            text-align: center;
-            color: #2980b9;
-            border-bottom: 3px solid #2980b9;
-            padding-bottom: 15px;
-            margin-bottom: 40px;
+            color: var(--primary-color);
+            margin: 0;
+            font-size: 2.2em;
+        }
+        .date {
+            color: #7f8c8d;
+            font-size: 1.1em;
+            font-weight: 500;
+        }
+        h2 {
+            color: var(--primary-color);
+            border-left: 5px solid var(--accent-color);
+            padding-left: 15px;
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
+        h3 {
+            color: var(--primary-color);
+        }
+        p {
+            margin-bottom: 15px;
+        }
+        ul, ol {
+            padding-left: 20px;
+        }
+        ul li {
+            background-color: #f1f4f6;
+            margin-bottom: 10px;
+            padding: 12px 15px;
+            border-radius: 5px;
+            border-left: 4px solid var(--accent-color);
+            list-style: none;
         }
         table {
             width: 100%;
             border-collapse: collapse;
-            margin-top: 20px;
+            margin-top: 10px;
+            font-size: 0.95em;
         }
         th, td {
-            border: 1px solid #ddd;
-            padding: 12px;
+            padding: 12px 15px;
             text-align: left;
+            border-bottom: 1px solid #ddd;
         }
         th {
-            background-color: #ecf0f1;
-            font-weight: bold;
-            color: #34495e;
+            background-color: var(--primary-color);
+            color: white;
+            font-weight: 600;
         }
-        tr:nth-child(even) {
-            background-color: #f9f9f9;
+        tr:hover {
+            background-color: #f1f1f1;
         }
-        .market-down {
-            color: #e74c3c;
-            font-weight: bold;
+        code {
+            background: #f4f4f4;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-size: 0.9em;
         }
-        .market-up {
-            color: #27ae60;
-            font-weight: bold;
+        blockquote {
+            border-left: 4px solid var(--accent-color);
+            margin: 0;
+            padding: 10px 20px;
+            background: #f1f4f6;
+            border-radius: 0 5px 5px 0;
         }
-        ul {
-            list-style-type: disc;
-            margin-left: 20px;
+        a {
+            color: var(--accent-color);
+            text-decoration: none;
         }
-        .date {
-            text-align: center;
-            font-size: 1.1em;
-            color: #7f8c8d;
-            margin-bottom: 20px;
+        a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Investment Report</h1>
-        <p class="date">March 9, 2026</p>
-
-        <section>
-            <h2>Macro Update & Sentiment</h2>
-            <p>Major US and European market indices showed declines amidst concerns over escalating Middle East conflict and rising oil prices. US labor market weakness and rising prices are reigniting fears of stagflation.</p>
-            
-            <h3>Market Indices</h3>
-            <ul>
-                <li><strong>US500 (S&P 500 CFD):</strong> fell to 6603 points, <span class="market-down">-2.03%</span></li>
-                <li><strong>Dow Jones Industrial Average:</strong> closed at 47501.55 on March 6, 2026, <span class="market-down">-0.95%</span></li>
-                <li><strong>NASDAQ Composite:</strong> closed at 22387.68 on March 6, 2026, <span class="market-down">-1.59%</span></li>
-                <li><strong>EU50 (Euro Area Stock Market Index):</strong> fell to 5547 points, <span class="market-down">-3.02%</span></li>
-                <li><strong>DAX:</strong> fell to 22725 points, <span class="market-down">-3.67%</span></li>
-                <li><strong>CAC 40:</strong> fell to 7993 points on March 6, 2026, <span class="market-down">-0.65%</span></li>
-                <li><strong>FTSE 100:</strong> up by 51.16 points (<span class="market-up">+0.49%</span>) to 10465.1 on March 6, 2026</li>
-            </ul>
-
-            <h3>Commodities</h3>
-            <ul>
-                <li><strong>Gold:</strong> fell to ~$5,089.37/troy ounce, <span class="market-down">-1.35%</span></li>
-                <li><strong>Silver:</strong> dropped to ~$83/troy ounce, <span class="market-down">-1.58%</span></li>
-            </ul>
-
-            <h3>Key Macroeconomic News & Events</h3>
-            <ul>
-                <li>Escalating Middle East conflict and "war in Iran" (started Feb 28) significantly impacting global energy markets.</li>
-                <li>Strait of Hormuz closure threatening oil/LNG supply, pushing WTI crude above US$90/barrel and European gas prices to highest levels since Ukraine invasion.</li>
-                <li>US labor market weakness: unexpected loss of 92,000 jobs in February, unemployment to 4.4%.</li>
-                <li>Rising prices in the ISM manufacturing index, reigniting fears of stagflation.</li>
-                <li>Scheduled economic data for today: China CPI, Japan GDP, US Consumer Inflation Expectations.</li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>Recommendations Table</h2>
-            <p>No specific buy/sell recommendations from emails were found. The market sentiment is generally negative due to geopolitical and inflationary concerns.</p>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Ticker/Asset</th>
-                        <th>Action</th>
-                        <th>Rationale/Status</th>
-                        <th>Source</th>
-                        <th>Date Sent</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td colspan="5">No email recommendations found.</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
-
-        <section>
-            <h2>Sector Deep Dives: Theme of the Week</h2>
-            <p><strong>Theme:</strong> Geopolitical Risks & Inflationary Pressures</p>
-            <p>The global economic landscape is currently dominated by significant geopolitical tensions in the Middle East, leading to a surge in oil prices and concerns about global energy supply. This, combined with signs of labor market weakness and rising inflation in the US, is fueling fears of stagflation. Investors are closely watching central bank responses and the potential for further escalation in conflicts.</p>
-        </section>
-
-        <section>
-            <h2>Upcoming Calendar: Next 7 Days</h2>
-            <h3>Economic Data</h3>
-            <ul>
-                <li><strong>Monday, March 9:</strong> China CPI, Japan GDP, US NFIB Small Business Survey, US Existing-Home Sales, US Internet Sales (E-Commerce Sales).</li>
-                <li><strong>Tuesday, March 10:</strong> US MBA Mortgage Applications Survey, US CPI, US St. Louis Fed Financial Stress Index, US Oil Inventories, US Treasury Budget.</li>
-                <li><strong>Wednesday, March 11:</strong> Germany CPI, UK Bank of England Inflation Report Hearings, US CPI data, US Jobless Claims, US Quarterly Services Survey, US State and Local Government Tax Revenue, US Natural Gas Storage Report, US Financial Accounts - Households, US Financial Accounts - Nonfinancial Corporate, Eurozone CPI y/y.</li>
-                <li><strong>Thursday, March 12:</strong> UK Bank of England Governor's speech, US Producer Price Index (PPI), US Durable Goods (Advance), US International Trade (FT900), US Initial Jobless Claims.</li>
-                <li><strong>Friday, March 13:</strong> Canada February labor market data, US Annual GDP for Q4 (secondary estimate), US Core Personal Consumption Expenditures (PCE), US University of Michigan's preliminary consumer sentiment index, Eurozone Harmonized Index of Consumer Prices (HICP) y/y.</li>
-            </ul>
-            <h3>Earnings Reports</h3>
-            <ul>
-                <li><strong>Monday, March 9:</strong> Oracle (ORCL), Hewlett Packard Enterprise (HPE), Fuelcell Energy Inc (FCEL), Zim Integrated Shipping Services Ltd (ZIM), Korn Ferry (KFY), Nayax Ltd (NYAX), Heritage Insurance Holdings Inc (HRTG), ACCO Brands Corporation (ACCO), 3D Systems Corp (DDD), BETA Technologies Inc (BETA), ARS Pharmaceuticals Inc (SPRY), Arq Inc (ARQ), Casey's General Stores, Inc. (CASY), Coherus Oncology Inc (CHRS), Fluent Inc (FLNT), Greenlight Capital Re Ltd (GLRE).</li>
-                <li><strong>Tuesday, March 10:</strong> Nio (NIO), UEC, BNTX, KSS, AVAV.</li>
-                <li><strong>Wednesday, March 11:</strong> SERV, CPB, PATH, SFIX, BMBL.</li>
-                <li><strong>Thursday, March 12:</strong> DKS, LI, DG, ADBE, ULTA, S, LEN.</li>
-            </ul>
-        </section>
+        <header>
+            <h1>Investment Report</h1>
+            <div class="date">March 9, 2026</div>
+        </header>
+        <div class="report-content">
+<h1>Daily Trade Signal Report - March 9, 2026</h1>
+<h2>Macro &amp; Sentiment</h2>
+<ul>
+<li>President Trump formally nominated Kevin Warsh as Fed Chair on March 4, succeeding Jerome Powell whose term ends May 15; Senate confirmation process awaits amid political tensions. <a href="https://www.reuters.com/world/us/white-house-submits-warsh-nomination-fed-chair-senate-2026-03-04/">reuters</a></li>
+<li>Gold prices fell to $5,035.83/t.oz today, down 2.39% daily amid broader precious metals decline (silver at $83.34/oz, -1.20%). <a href="https://tradingeconomics.com/commodity/gold">tradingeconomics</a></li>
+<li>Key macro events ahead: China's CPI (Mar 9), US CPI (Mar 11), US PPI (Mar 13), and US core PCE (Mar 14). <a href="https://www.litefinance.org/blog/analysts-opinions/weekly-economic-calendar-for-09032026-15032026/">litefinance</a></li>
+<li>Geopolitical risks from US-Iran tensions and Middle East conflict weigh on markets, boosting defense and energy sentiment per recent emails. <a href="https://mail.google.com/mail/u/0/?pli=1#all/19caf3e994166a37">mail.google</a></li>
+<li>Earnings spotlight: Limited major US reports today; European names like Séché Environnement noted, with calendars showing light activity early week. <a href="https://www.marketscreener.com/news/marketscreener-corporate-earnings-calendar-march-9-2026-ce7e5fd8df89f42d">marketscreener</a></li>
+</ul>
+<h2>Recommendations Table</h2>
+<table>
+<thead>
+<tr>
+<th>Ticker</th>
+<th>Action</th>
+<th>Rationale/Status</th>
+<th>Source</th>
+<th>Date Sent</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SES</td>
+<td>Hold</td>
+<td>SES AI Corp dropped 35%; downgraded but explicitly "don't sell" [UNCERTAIN on price limit]</td>
+<td>Microcap Millionaire (Chris Cimorelli), "Update: SES Drops 35%"</td>
+<td>Thursday, March 05, 2026, 9:06 PM CET  <a href="https://mail.google.com/mail/u/0/?pli=1#all/19cbf9c4a49bee3c">mail.google</a></td>
+</tr>
+<tr>
+<td>RCAT</td>
+<td>Buy/Hold</td>
+<td>Red Cat Holdings positioned as "Pentagon’s Next Big Supplier"; "Buy It. Hold It. Forget It." [UNCERTAIN on price]</td>
+<td>Microcap Millionaire (Chris Cimorelli), "The Pentagon’s Next Big Supplier?"</td>
+<td>Monday, March 02, 2026, 10:20 PM CET  <a href="https://mail.google.com/mail/u/0/?pli=1#all/19cb06c55dbfaa75">mail.google</a></td>
+</tr>
+</tbody>
+</table>
+<h2>Sector Insight</h2>
+<p>Microcap tech and defense stocks are highlighted amid geopolitical tensions (US-Iran war, cyber threats), with Chris Cimorelli emphasizing SES (AI/batteries) and RCAT (drones) as resilient plays despite volatility; "don't sell" SES post-35% drop signals confidence in long-term catalysts like Pentagon contracts. <a href="https://mail.google.com/mail/u/0/?pli=1#all/19cbf9c4a49bee3c">mail.google</a></p>
+<h2>Calendar</h2>
+<h3>Next 15 Days Earnings (Mar 9-24, 2026)</h3>
+<ul>
+<li>Mar 9: Séché Environnement SA (annual), light US volume. <a href="https://www.marketscreener.com/news/marketscreener-corporate-earnings-calendar-march-9-2026-ce7e5fd8df89f42d">marketscreener</a></li>
+<li>Mar 10-11: Sparse; watch TotalEnergies, Dassault Aviation (Paris focus). <a href="https://www.marketscreener.com/news/marketscreener-corporate-earnings-calendar-march-9-2026-ce7e5fd8df89f42d">marketscreener</a></li>
+<li>Mar 11+: US CPI context may overshadow; no major blockbusters listed (calendar sparse). <a href="https://finance.yahoo.com/calendar/earnings?from=2026-01-19&amp;to=2026-01-24">finance.yahoo</a></li>
+</ul>
+<h3>Next 7 Days Macro Events (Mar 9-16, 2026)</h3>
+<ul>
+<li>Mar 9: China CPI (01:30 CET), Japan GDP. <a href="https://www.litefinance.org/blog/analysts-opinions/weekly-economic-calendar-for-09032026-15032026/">litefinance</a></li>
+<li>Mar 11: Germany CPI, BoE Inflation Report Hearings, US CPI (high impact). <a href="https://www.litefinance.org/blog/analysts-opinions/weekly-economic-calendar-for-09032026-15032026/">litefinance</a></li>
+<li>Mar 13: BoE Governor speech, US PPI. <a href="https://www.litefinance.org/blog/analysts-opinions/weekly-economic-calendar-for-09032026-15032026/">litefinance</a></li>
+<li>Mar 14: Canada labor data, US Q4 GDP (2nd est.), US core PCE, U. Michigan sentiment. <a href="https://www.litefinance.org/blog/analysts-opinions/weekly-economic-calendar-for-09032026-15032026/">litefinance</a><br />
+(Source: <a href="https://www.litefinance.org/blog/analysts-opinions/weekly-economic-calendar-for-09032026-15032026/">LiteFinance Weekly Calendar</a>) <a href="https://www.litefinance.org/blog/analysts-opinions/weekly-economic-calendar-for-09032026-15032026/">litefinance</a></li>
+</ul>
+        </div>
     </div>
+<script>
+// Password protection - SHA-256 hash of "200777"
+const CORRECT_HASH = "655eeee212cf8682e419f524b66e07cdd2d56306399f7f615f9cfb7dba2ad37d";
+
+async function sha256(message) {
+    const msgBuffer = new TextEncoder().encode(message);
+    const hashBuffer = await crypto.subtle.digest("SHA-256", msgBuffer);
+    const hashArray = Array.from(new Uint8Array(hashBuffer));
+    return hashArray.map(b => b.toString(16).padStart(2, "0")).join("");
+}
+
+if (sessionStorage.getItem("reportsAuthenticated") !== CORRECT_HASH) {
+    const password = prompt("This report is password protected. Enter password:");
+    if (password) {
+        sha256(password).then(inputHash => {
+            if (inputHash === CORRECT_HASH) {
+                sessionStorage.setItem("reportsAuthenticated", CORRECT_HASH);
+            } else {
+                alert("Incorrect password");
+                window.location.href = "../reports.html";
+            }
+        });
+    } else {
+        window.location.href = "../reports.html";
+    }
+}
+</script>
 </body>
 </html>
