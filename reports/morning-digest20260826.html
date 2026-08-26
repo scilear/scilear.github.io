@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investment Report - August 26, 2026</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #3498db;
+            --bg-color: #f8f9fa;
+            --card-bg: #ffffff;
+            --text-color: #333333;
+            --success-color: #27ae60;
+            --warning-color: #f39c12;
+            --danger-color: #c0392b;
+        }
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background-color: var(--card-bg);
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        header {
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        h1 {
+            color: var(--primary-color);
+            margin: 0;
+            font-size: 2.2em;
+        }
+        .date {
+            color: #7f8c8d;
+            font-size: 1.1em;
+            font-weight: 500;
+        }
+        h2 {
+            color: var(--primary-color);
+            border-left: 5px solid var(--accent-color);
+            padding-left: 15px;
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
+        h3 {
+            color: var(--primary-color);
+        }
+        p {
+            margin-bottom: 15px;
+        }
+        ul, ol {
+            padding-left: 20px;
+        }
+        ul li {
+            background-color: #f1f4f6;
+            margin-bottom: 10px;
+            padding: 12px 15px;
+            border-radius: 5px;
+            border-left: 4px solid var(--accent-color);
+            list-style: none;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+            font-size: 0.95em;
+        }
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: var(--primary-color);
+            color: white;
+            font-weight: 600;
+        }
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+        code {
+            background: #f4f4f4;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-size: 0.9em;
+        }
+        blockquote {
+            border-left: 4px solid var(--accent-color);
+            margin: 0;
+            padding: 10px 20px;
+            background: #f1f4f6;
+            border-radius: 0 5px 5px 0;
+        }
+        a {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Investment Report</h1>
+            <div class="date">August 26, 2026</div>
+        </header>
+        <div class="report-content">
+<p>Macro &amp; sentiment<br />
+- Global equities drift as investors await Fed chair nomination and key earnings; gold and silver rise on safe-haven bids while real yields retreat.<br />
+- U.S. equity futures show mixed sentiment ahead of a busy earnings slate and inflation data; tech and discretionary names likely remain volatile.<br />
+- Treasury yields edge lower after hawkish commentary, supporting growth-oriented equities and raising duration-sensitive names.<br />
+- Rising oil prices push energy complex higher, aiding energy stocks but pressuring consumer-discretionary names on higher input costs.<br />
+- Major earnings kicks off today across sectors; focus on guidance and margin resilience to drive near-term moves.</p>
+<p>Recommendations<br />
+| Ticker | Action | Rationale/Status | Source | Date Sent |<br />
+| RR | Buy | Recovery signal from TRADE UPDATE; price limit referenced in subject; [UNCERTAIN] due to header verification | email subject: TRADE UPDATE RR Buy up to 42.50 (Trade Update) | UNKNOWN |<br />
+| USAR | Hold | Core holding with updated expiry not yet met; awaiting further confirmation from header | email subject: TRADE UPDATE USAR Hold (Trade Update) | UNKNOWN |<br />
+| ASST | Sell | Expiry approaching; price triggers noted in body but header date uncertain | email subject: TRADE UPDATE ASST Sell up to 9.75 (Trade Update) | UNKNOWN |</p>
+<p>Sector insight<br />
+- Energy and materials are benefiting from higher commodity prices while technology remains volatile on earnings expectations; the mix suggests a rotation toward economically sensitive sectors as macro headlines evolve.</p>
+<p>Calendar<br />
+- Large-cap earnings in next 15 days: Apple (AAPL), Microsoft (MSFT), Amazon (AMZN), Alphabet (GOOGL), Nvidia (NVDA) with date-specifics in company IR pages.<br />
+- Macro events in next 7 days: Federal Reserve testimony, CPI/PPI releases, durable goods data, and OPEC meeting outcomes. Source: company IR pages and major financial calendars.</p>
+        </div>
+    </div>
+<script>
+// Password protection - SHA-256 hash of "200777"
+const CORRECT_HASH = "655eeee212cf8682e419f524b66e07cdd2d56306399f7f615f9cfb7dba2ad37d";
+
+async function sha256(message) {
+    const msgBuffer = new TextEncoder().encode(message);
+    const hashBuffer = await crypto.subtle.digest("SHA-256", msgBuffer);
+    const hashArray = Array.from(new Uint8Array(hashBuffer));
+    return hashArray.map(b => b.toString(16).padStart(2, "0")).join("");
+}
+
+if (sessionStorage.getItem("reportsAuthenticated") !== CORRECT_HASH) {
+    const password = prompt("This report is password protected. Enter password:");
+    if (password) {
+        sha256(password).then(inputHash => {
+            if (inputHash === CORRECT_HASH) {
+                sessionStorage.setItem("reportsAuthenticated", CORRECT_HASH);
+            } else {
+                alert("Incorrect password");
+                window.location.href = "../reports.html";
+            }
+        });
+    } else {
+        window.location.href = "../reports.html";
+    }
+}
+</script>
+</body>
+</html>
